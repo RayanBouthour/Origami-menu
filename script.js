@@ -6,108 +6,374 @@
 
 /* =========================================================
    🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢
-   
-        ⭐⭐⭐  MODIFIE TES PRODUITS ICI  ⭐⭐⭐
-   
-   =========================================================
-   
-   Pour chaque produit, tu dois remplir :
 
-   1. reference
-   2. nameFR
-   3. nameEN
-   4. price
-   5. image
-   6. category
+        ⭐⭐⭐  MODIFIE TON MENU ICI  ⭐⭐⭐
 
    ========================================================= */
 
 
+/* =========================================================
+   🟢 1. ORDRE DES CATÉGORIES PRINCIPALES
+   =========================================================
+
+   Ce sont les catégories qui apparaîtront
+   dans la barre de navigation en haut.
+
+   Exemple :
+
+   Tout | Entrées | Sushi | Plats chauds | Desserts
+
+   ⚠️ Le texte doit être exactement le même que
+   celui utilisé dans "category" dans tes produits.
+   ========================================================= */
+
+const categoriesOrder = [
+
+    "Entrées",
+
+    "Sushi",
+
+    "Maki",
+
+    "California",
+
+    "Plats chauds",
+
+    "Menus",
+
+    "Desserts",
+
+    "Boissons"
+
+];
+
+
+
+/* =========================================================
+   🟢 2. ORDRE DES SOUS-CATÉGORIES
+   =========================================================
+
+   Ici tu définis l'ordre des titres à l'intérieur
+   de chaque catégorie principale.
+
+   Exemple :
+
+   PLATS CHAUDS
+
+   KUSHIKATSU
+   → produits
+
+   YAKITORI
+   → produits
+
+   GYOZA
+   → produits
+
+   ========================================================= */
+
+const subcategoriesOrder = {
+
+    "Entrées": [
+
+        "Salades",
+
+        "Soupes",
+
+        "Edamame"
+
+    ],
+
+
+    "Sushi": [
+
+        "Nigiri",
+
+        "Sashimi"
+
+    ],
+
+
+    "Maki": [
+
+        "Maki classiques",
+
+        "Maki spéciaux"
+
+    ],
+
+
+    "California": [
+
+        "California classiques",
+
+        "California spéciaux"
+
+    ],
+
+
+    "Plats chauds": [
+
+        "Kushikatsu",
+
+        "Yakitori",
+
+        "Gyoza",
+
+        "Tempura"
+
+    ],
+
+
+    "Menus": [
+
+        "Menus Sushi",
+
+        "Menus Maki",
+
+        "Menus Famille"
+
+    ],
+
+
+    "Desserts": [
+
+        "Desserts"
+
+    ],
+
+
+    "Boissons": [
+
+        "Softs",
+
+        "Eaux",
+
+        "Jus"
+
+    ]
+
+};
+
+
+
+/* =========================================================
+   🟢 3. TES PRODUITS
+   =========================================================
+
+   Pour chaque produit :
+
+   reference   → Référence du produit
+   nameFR      → Nom français
+   nameEN      → Nom anglais
+   price       → Prix
+   image       → Image dans /images
+   category    → Catégorie principale
+   subcategory → Sous-catégorie
+
+   ========================================================= */
+
 const products = [
 
+
     /* =====================================================
-       🟢 PRODUIT EXEMPLE — [193]
+       EXEMPLE : PLATS CHAUDS → KUSHIKATSU
        ===================================================== */
 
     {
         reference: "193",
 
-        // 🇫🇷 NOM FRANÇAIS
         nameFR: "Kushikatsu Bœuf Fromage",
 
-        // 🇬🇧 NOM ANGLAIS
-        // 👉 REMPLACE CE TEXTE PAR TON NOM ANGLAIS
         nameEN: "Beef Cheese Kushikatsu",
 
-        // 💰 PRIX
         price: "18 DT",
 
-        // 📸 IMAGE
-        // Ton image doit être placée dans :
-        // images/193.jpg
         image: "images/193.jpg",
 
-        // 📂 CATÉGORIE
-        category: "Kushikatsu"
+        category: "Plats chauds",
+
+        subcategory: "Kushikatsu"
     },
 
-
-    /* =====================================================
-       🟢 PRODUIT EXEMPLE — [194]
-       ===================================================== */
 
     {
         reference: "194",
 
-        nameFR: "Nom du produit",
+        nameFR: "Kushikatsu Poulet",
 
-        // 👉 À REMPLACER
-        nameEN: "English Product Name",
+        nameEN: "Chicken Kushikatsu",
 
-        price: "XX DT",
+        price: "16 DT",
 
         image: "images/194.jpg",
 
-        category: "Maki"
+        category: "Plats chauds",
+
+        subcategory: "Kushikatsu"
     },
 
-
-    /* =====================================================
-       🟢 PRODUIT EXEMPLE — [195]
-       ===================================================== */
 
     {
         reference: "195",
 
-        nameFR: "Nom du produit",
+        nameFR: "Kushikatsu Crevette",
 
-        nameEN: "English Product Name",
+        nameEN: "Shrimp Kushikatsu",
 
-        price: "XX DT",
+        price: "20 DT",
 
         image: "images/195.jpg",
 
-        category: "Sushi"
+        category: "Plats chauds",
+
+        subcategory: "Kushikatsu"
+    },
+
+
+
+    /* =====================================================
+       EXEMPLE : PLATS CHAUDS → YAKITORI
+       ===================================================== */
+
+    {
+        reference: "196",
+
+        nameFR: "Yakitori Poulet",
+
+        nameEN: "Chicken Yakitori",
+
+        price: "15 DT",
+
+        image: "images/196.jpg",
+
+        category: "Plats chauds",
+
+        subcategory: "Yakitori"
+    },
+
+
+    {
+        reference: "197",
+
+        nameFR: "Yakitori Bœuf",
+
+        nameEN: "Beef Yakitori",
+
+        price: "17 DT",
+
+        image: "images/197.jpg",
+
+        category: "Plats chauds",
+
+        subcategory: "Yakitori"
+    },
+
+
+
+    /* =====================================================
+       EXEMPLE : PLATS CHAUDS → GYOZA
+       ===================================================== */
+
+    {
+        reference: "198",
+
+        nameFR: "Gyoza Poulet",
+
+        nameEN: "Chicken Gyoza",
+
+        price: "14 DT",
+
+        image: "images/198.jpg",
+
+        category: "Plats chauds",
+
+        subcategory: "Gyoza"
+    },
+
+
+
+    /* =====================================================
+       EXEMPLE : SUSHI → NIGIRI
+       ===================================================== */
+
+    {
+        reference: "201",
+
+        nameFR: "Nigiri Saumon",
+
+        nameEN: "Salmon Nigiri",
+
+        price: "12 DT",
+
+        image: "images/201.jpg",
+
+        category: "Sushi",
+
+        subcategory: "Nigiri"
+    },
+
+
+    {
+        reference: "202",
+
+        nameFR: "Nigiri Thon",
+
+        nameEN: "Tuna Nigiri",
+
+        price: "14 DT",
+
+        image: "images/202.jpg",
+
+        category: "Sushi",
+
+        subcategory: "Nigiri"
+    },
+
+
+
+    /* =====================================================
+       EXEMPLE : MAKI → MAKI CLASSIQUES
+       ===================================================== */
+
+    {
+        reference: "203",
+
+        nameFR: "Maki Saumon",
+
+        nameEN: "Salmon Maki",
+
+        price: "15 DT",
+
+        image: "images/203.jpg",
+
+        category: "Maki",
+
+        subcategory: "Maki classiques"
     },
 
 
     /*
     =========================================================
 
-    🟢 POUR AJOUTER UN NOUVEAU PRODUIT :
+    🟢 POUR AJOUTER UN PRODUIT :
 
-    Copie simplement ce bloc :
+    Copie ce modèle :
 
     {
-        reference: "196",
-        nameFR: "Nom français",
-        nameEN: "English name",
-        price: "XX DT",
-        image: "images/196.jpg",
-        category: "Sushi"
-    },
+        reference: "204",
 
-    Puis change les informations.
+        nameFR: "Nom français",
+
+        nameEN: "English name",
+
+        price: "XX DT",
+
+        image: "images/204.jpg",
+
+        category: "Plats chauds",
+
+        subcategory: "Kushikatsu"
+    },
 
     =========================================================
     */
@@ -117,8 +383,10 @@ const products = [
 
 
 /* =========================================================
-   🔴 FIN DE LA ZONE PRODUITS
+   🔴 FIN DE LA ZONE À MODIFIER
    ========================================================= */
+
+
 
 
 
@@ -227,19 +495,16 @@ document.addEventListener(
     "DOMContentLoaded",
     () => {
 
-        /*
-        Vérifie si le client a déjà choisi
-        une langue auparavant.
-        */
-
         const savedLanguage =
             localStorage.getItem(
                 "origamiLanguage"
             );
 
 
-        if (savedLanguage === "fr" ||
-            savedLanguage === "en") {
+        if (
+            savedLanguage === "fr" ||
+            savedLanguage === "en"
+        ) {
 
             currentLanguage =
                 savedLanguage;
@@ -249,17 +514,9 @@ document.addEventListener(
         }
 
 
-        /*
-        Année actuelle dans le footer
-        */
-
         currentYear.textContent =
             new Date().getFullYear();
 
-
-        /*
-        Prépare les événements
-        */
 
         setupEventListeners();
 
@@ -309,7 +566,7 @@ function setupEventListeners() {
 
     /*
     ---------------------------------------------------------
-    BOUTON CHANGEMENT DE LANGUE
+    CHANGEMENT DE LANGUE
     ---------------------------------------------------------
     */
 
@@ -395,22 +652,15 @@ function setLanguage(
         language;
 
 
-    /*
-    Sauvegarde la langue
-    dans le navigateur.
-    */
-
     localStorage.setItem(
         "origamiLanguage",
         language
     );
 
 
-    /*
-    Met à jour le bouton
-    */
-
-    if (language === "fr") {
+    if (
+        language === "fr"
+    ) {
 
         languageSwitcher.textContent =
             "🇫🇷 FR";
@@ -423,23 +673,9 @@ function setLanguage(
     }
 
 
-    /*
-    Met à jour les textes
-    */
-
     updateInterfaceTexts();
 
-
-    /*
-    Regénère les catégories
-    */
-
     renderCategories();
-
-
-    /*
-    Regénère les produits
-    */
 
     renderProducts();
 
@@ -471,60 +707,54 @@ function showMenu() {
 
 
 /* =========================================================
-   TEXTES DE L'INTERFACE
+   TEXTES INTERFACE
    ========================================================= */
 
 function updateInterfaceTexts() {
 
 
-    /*
-    Titre
-    */
-
     menuTitle.textContent =
+
         currentLanguage === "fr"
+
             ? "Notre Menu"
+
             : "Our Menu";
 
 
-    /*
-    Sous-titre
-    */
-
     menuSubtitle.textContent =
+
         currentLanguage === "fr"
+
             ? "Découvrez notre sélection"
+
             : "Discover our selection";
 
 
-    /*
-    Barre de recherche
-    */
-
     searchInput.placeholder =
+
         translations[
             currentLanguage
         ].searchPlaceholder;
 
 
-    /*
-    Aucun résultat
-    */
-
     const noResultsTitle =
         noResults.querySelector("h2");
+
 
     const noResultsText =
         noResults.querySelector("p");
 
 
     noResultsTitle.textContent =
+
         translations[
             currentLanguage
         ].noResults;
 
 
     noResultsText.textContent =
+
         translations[
             currentLanguage
         ].noResultsDescription;
@@ -534,40 +764,7 @@ function updateInterfaceTexts() {
 
 
 /* =========================================================
-   RÉCUPÉRER LES CATÉGORIES
-   ========================================================= */
-
-function getCategories() {
-
-
-    /*
-    Récupère toutes les catégories
-    présentes dans les produits.
-    */
-
-    const categories =
-        products.map(
-            product =>
-                product.category
-        );
-
-
-    /*
-    Supprime les doublons
-    */
-
-    return [
-        ...new Set(
-            categories
-        )
-    ];
-
-}
-
-
-
-/* =========================================================
-   AFFICHER LES CATÉGORIES
+   AFFICHER LES CATÉGORIES PRINCIPALES
    ========================================================= */
 
 function renderCategories() {
@@ -578,7 +775,9 @@ function renderCategories() {
 
 
     /*
-    Bouton "Tout"
+    ---------------------------------------------------------
+    BOUTON "TOUT"
+    ---------------------------------------------------------
     */
 
     const allButton =
@@ -595,16 +794,38 @@ function renderCategories() {
     );
 
 
+
     /*
-    Toutes les autres catégories
+    ---------------------------------------------------------
+    CATÉGORIES DANS L'ORDRE DÉFINI
+    ---------------------------------------------------------
     */
 
-    const categories =
-        getCategories();
-
-
-    categories.forEach(
+    categoriesOrder.forEach(
         category => {
+
+
+            /*
+            On vérifie que cette catégorie
+            contient au moins un produit.
+            */
+
+            const hasProducts =
+                products.some(
+                    product =>
+                        product.category ===
+                        category
+                );
+
+
+            if (
+                !hasProducts
+            ) {
+
+                return;
+
+            }
+
 
             const button =
                 createCategoryButton(
@@ -625,7 +846,7 @@ function renderCategories() {
 
 
 /* =========================================================
-   CRÉER UN BOUTON CATÉGORIE
+   CRÉER BOUTON CATÉGORIE
    ========================================================= */
 
 function createCategoryButton(
@@ -647,10 +868,6 @@ function createCategoryButton(
         label;
 
 
-    /*
-    Catégorie actuellement active
-    */
-
     if (
         currentCategory === category
     ) {
@@ -661,10 +878,6 @@ function createCategoryButton(
 
     }
 
-
-    /*
-    Lorsqu'on clique
-    */
 
     button.addEventListener(
         "click",
@@ -700,9 +913,9 @@ function getFilteredProducts() {
 
 
             /*
-            -----------------------------------------------
-            FILTRE CATÉGORIE
-            -----------------------------------------------
+            -------------------------------------------------
+            CATÉGORIE PRINCIPALE
+            -------------------------------------------------
             */
 
             const matchesCategory =
@@ -715,38 +928,73 @@ function getFilteredProducts() {
 
 
             /*
-            -----------------------------------------------
-            FILTRE RECHERCHE
-            -----------------------------------------------
+            -------------------------------------------------
+            RECHERCHE
+
+            Recherche dans :
+
+            - Nom français
+            - Nom anglais
+            - Référence
+            - Catégorie
+            - Sous-catégorie
+            -------------------------------------------------
             */
 
-            const productName =
+            const nameFR =
+                product.nameFR
+                    .toLowerCase();
 
-                currentLanguage === "fr"
 
-                    ? product.nameFR
+            const nameEN =
+                product.nameEN
+                    .toLowerCase();
 
-                    : product.nameEN;
+
+            const category =
+                product.category
+                    .toLowerCase();
+
+
+            const subcategory =
+                product.subcategory
+                    .toLowerCase();
+
+
+            const reference =
+                product.reference
+                    .toLowerCase();
 
 
             const matchesSearch =
 
-                productName
-                    .toLowerCase()
-                    .includes(
-                        currentSearch
-                    ) ||
+                nameFR.includes(
+                    currentSearch
+                ) ||
 
-                product.reference
-                    .toLowerCase()
-                    .includes(
-                        currentSearch
-                    );
+                nameEN.includes(
+                    currentSearch
+                ) ||
+
+                category.includes(
+                    currentSearch
+                ) ||
+
+                subcategory.includes(
+                    currentSearch
+                ) ||
+
+                reference.includes(
+                    currentSearch
+                );
 
 
             return (
+
                 matchesCategory &&
+
                 matchesSearch
+
             );
 
         }
@@ -772,7 +1020,9 @@ function renderProducts() {
 
 
     /*
-    Si aucun résultat
+    ---------------------------------------------------------
+    AUCUN RÉSULTAT
+    ---------------------------------------------------------
     */
 
     if (
@@ -788,48 +1038,48 @@ function renderProducts() {
     }
 
 
-    /*
-    Il y a des résultats
-    */
-
     noResults.classList.add(
         "hidden"
     );
 
 
-    /*
-    -----------------------------------------------
-    SI "TOUT" EST SÉLECTIONNÉ
-    -----------------------------------------------
 
-    On organise les produits
-    par catégorie.
+    /*
+    ---------------------------------------------------------
+    AFFICHAGE PAR CATÉGORIE
+    ---------------------------------------------------------
     */
 
     if (
-        currentCategory === "all" &&
-        currentSearch === ""
+        currentCategory === "all"
     ) {
 
-        renderProductsByCategory(
-            filteredProducts
+        /*
+        On affiche toutes les catégories
+        dans l'ordre défini.
+        */
+
+        categoriesOrder.forEach(
+            category => {
+
+                renderCategory(
+                    category,
+                    filteredProducts
+                );
+
+            }
         );
 
     } else {
 
         /*
-        Sinon on affiche
-        directement les produits.
+        On affiche uniquement
+        la catégorie sélectionnée.
         */
 
-        const grid =
-            createProductGrid(
-                filteredProducts
-            );
-
-
-        productsContainer.appendChild(
-            grid
+        renderCategory(
+            currentCategory,
+            filteredProducts
         );
 
     }
@@ -839,38 +1089,112 @@ function renderProducts() {
 
 
 /* =========================================================
-   AFFICHER PAR CATÉGORIE
+   AFFICHER UNE CATÉGORIE PRINCIPALE
    ========================================================= */
 
-function renderProductsByCategory(
+function renderCategory(
+    category,
     productList
 ) {
 
 
-    const categories =
-        getCategories();
+    /*
+    Récupère les produits
+    de cette catégorie.
+    */
+
+    const categoryProducts =
+
+        productList.filter(
+            product =>
+                product.category ===
+                category
+        );
 
 
-    categories.forEach(
-        category => {
+    /*
+    Si aucun produit,
+    on ne fait rien.
+    */
+
+    if (
+        categoryProducts.length === 0
+    ) {
+
+        return;
+
+    }
 
 
-            const categoryProducts =
-                productList.filter(
+
+    /*
+    ========================================================
+    TITRE DE LA CATÉGORIE PRINCIPALE
+    ========================================================
+    */
+
+    const categoryTitle =
+        document.createElement(
+            "h2"
+        );
+
+
+    categoryTitle.className =
+        "category-title";
+
+
+    categoryTitle.textContent =
+        category;
+
+
+    productsContainer.appendChild(
+        categoryTitle
+    );
+
+
+
+    /*
+    ========================================================
+    RÉCUPÉRER L'ORDRE DES SOUS-CATÉGORIES
+    ========================================================
+    */
+
+    const orderedSubcategories =
+
+        subcategoriesOrder[
+            category
+        ] || [];
+
+
+
+    /*
+    ========================================================
+    AFFICHER LES SOUS-CATÉGORIES
+    ========================================================
+    */
+
+    orderedSubcategories.forEach(
+        subcategory => {
+
+
+            const subcategoryProducts =
+
+                categoryProducts.filter(
                     product =>
-                        product.category ===
-                        category
+
+                        product.subcategory ===
+                        subcategory
                 );
 
 
             /*
             S'il n'y a aucun produit
-            dans cette catégorie,
+            dans cette sous-catégorie,
             on ne l'affiche pas.
             */
 
             if (
-                categoryProducts.length === 0
+                subcategoryProducts.length === 0
             ) {
 
                 return;
@@ -878,36 +1202,42 @@ function renderProductsByCategory(
             }
 
 
+
             /*
-            Titre catégorie
+            ------------------------------------------------
+            TITRE SOUS-CATÉGORIE
+            ------------------------------------------------
             */
 
-            const title =
+            const subcategoryTitle =
                 document.createElement(
-                    "h2"
+                    "h3"
                 );
 
 
-            title.className =
-                "category-title";
+            subcategoryTitle.className =
+                "subcategory-title";
 
 
-            title.textContent =
-                category;
+            subcategoryTitle.textContent =
+                subcategory;
 
 
             productsContainer.appendChild(
-                title
+                subcategoryTitle
             );
 
 
+
             /*
-            Grille
+            ------------------------------------------------
+            GRILLE PRODUITS
+            ------------------------------------------------
             */
 
             const grid =
                 createProductGrid(
-                    categoryProducts
+                    subcategoryProducts
                 );
 
 
@@ -917,6 +1247,120 @@ function renderProductsByCategory(
 
         }
     );
+
+
+
+    /*
+    ========================================================
+    SOUS-CATÉGORIES NON PRÉVUES DANS LA LISTE
+    ========================================================
+
+    Si tu oublies d'ajouter une sous-catégorie
+    dans "subcategoriesOrder", les produits
+    ne disparaissent pas.
+
+    Ils seront affichés à la fin.
+    ========================================================
+    */
+
+    const displayedSubcategories =
+
+        orderedSubcategories;
+
+
+    const remainingProducts =
+
+        categoryProducts.filter(
+            product =>
+
+                !displayedSubcategories.includes(
+                    product.subcategory
+                )
+        );
+
+
+    /*
+    Si des produits restent,
+    on les affiche.
+    */
+
+    if (
+        remainingProducts.length > 0
+    ) {
+
+
+        /*
+        Regroupe les produits
+        restants par sous-catégorie.
+        */
+
+        const remainingNames =
+
+            [
+                ...new Set(
+                    remainingProducts.map(
+                        product =>
+                            product.subcategory
+                    )
+                )
+            ];
+
+
+        remainingNames.forEach(
+            subcategory => {
+
+
+                const productsInSubcategory =
+
+                    remainingProducts.filter(
+                        product =>
+
+                            product.subcategory ===
+                            subcategory
+                    );
+
+
+                /*
+                Titre
+                */
+
+                const title =
+                    document.createElement(
+                        "h3"
+                    );
+
+
+                title.className =
+                    "subcategory-title";
+
+
+                title.textContent =
+                    subcategory;
+
+
+                productsContainer.appendChild(
+                    title
+                );
+
+
+                /*
+                Produits
+                */
+
+                const grid =
+                    createProductGrid(
+                        productsInSubcategory
+                    );
+
+
+                productsContainer.appendChild(
+                    grid
+                );
+
+            }
+        );
+
+    }
 
 }
 
@@ -974,10 +1418,6 @@ function createProductCard(
 ) {
 
 
-    /*
-    Créer la carte
-    */
-
     const card =
         document.createElement(
             "article"
@@ -990,9 +1430,9 @@ function createProductCard(
 
 
     /*
-    -----------------------------------------------
-    NOM DU PRODUIT SELON LA LANGUE
-    -----------------------------------------------
+    ---------------------------------------------------------
+    NOM SELON LA LANGUE
+    ---------------------------------------------------------
     */
 
     const productName =
@@ -1006,9 +1446,9 @@ function createProductCard(
 
 
     /*
-    -----------------------------------------------
-    CARTE HTML
-    -----------------------------------------------
+    ---------------------------------------------------------
+    HTML DE LA CARTE
+    ---------------------------------------------------------
     */
 
     card.innerHTML = `
@@ -1024,7 +1464,9 @@ function createProductCard(
             >
 
             <span class="product-reference">
+
                 [${product.reference}]
+
             </span>
 
         </div>
@@ -1033,11 +1475,16 @@ function createProductCard(
         <div class="product-info">
 
             <h3 class="product-name">
+
                 ${productName}
+
             </h3>
 
+
             <div class="product-price">
+
                 ${product.price}
+
             </div>
 
         </div>
@@ -1052,7 +1499,7 @@ function createProductCard(
 
 
 /* =========================================================
-   BOUTON EFFACER LA RECHERCHE
+   BOUTON EFFACER RECHERCHE
    ========================================================= */
 
 function updateClearButton() {
@@ -1072,4 +1519,4 @@ function updateClearButton() {
 
     }
 
-      }
+}
