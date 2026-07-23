@@ -5,150 +5,233 @@
 
 
 /* =========================================================
-   🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢
-
-        ⭐⭐⭐  MODIFIE TON MENU ICI  ⭐⭐⭐
-
-   ========================================================= */
-
-
-/* =========================================================
-   🟢 1. ORDRE DES CATÉGORIES PRINCIPALES
-   =========================================================
-
-   Ce sont les catégories qui apparaîtront
-   dans la barre de navigation en haut.
-
-   Exemple :
-
-   Tout | Entrées | Sushi | Plats chauds | Desserts
-
-   ⚠️ Le texte doit être exactement le même que
-   celui utilisé dans "category" dans tes produits.
+   🟢 1. CATÉGORIES PRINCIPALES
    ========================================================= */
 
 const categoriesOrder = [
 
-    "Entrées",
+    {
+        id: "entrees",
+        fr: "Entrées",
+        en: "Starters"
+    },
 
-    "Sushi",
+    {
+        id: "sushi",
+        fr: "Sushi",
+        en: "Sushi"
+    },
 
-    "Maki",
+    {
+        id: "maki",
+        fr: "Maki",
+        en: "Maki"
+    },
 
-    "California",
+    {
+        id: "california",
+        fr: "California",
+        en: "California"
+    },
 
-    "Plats chauds",
+    {
+        id: "plats-chauds",
+        fr: "Plats chauds",
+        en: "Hot Dishes"
+    },
 
-    "Menus",
+    {
+        id: "menus",
+        fr: "Menus",
+        en: "Sets"
+    },
 
-    "Desserts",
+    {
+        id: "desserts",
+        fr: "Desserts",
+        en: "Desserts"
+    },
 
-    "Boissons"
+    {
+        id: "boissons",
+        fr: "Boissons",
+        en: "Drinks"
+    }
 
 ];
 
 
 
 /* =========================================================
-   🟢 2. ORDRE DES SOUS-CATÉGORIES
-   =========================================================
-
-   Ici tu définis l'ordre des titres à l'intérieur
-   de chaque catégorie principale.
-
-   Exemple :
-
-   PLATS CHAUDS
-
-   KUSHIKATSU
-   → produits
-
-   YAKITORI
-   → produits
-
-   GYOZA
-   → produits
-
+   🟢 2. SOUS-CATÉGORIES
    ========================================================= */
 
 const subcategoriesOrder = {
 
-    "Entrées": [
 
-        "Salades",
+    "entrees": [
 
-        "Soupes",
+        {
+            id: "salades",
+            fr: "Salades",
+            en: "Salads"
+        },
 
-        "Edamame"
+        {
+            id: "soupes",
+            fr: "Soupes",
+            en: "Soups"
+        },
 
-    ],
-
-
-    "Sushi": [
-
-        "Nigiri",
-
-        "Sashimi"
-
-    ],
-
-
-    "Maki": [
-
-        "Maki classiques",
-
-        "Maki spéciaux"
+        {
+            id: "edamame",
+            fr: "Edamame",
+            en: "Edamame"
+        }
 
     ],
 
 
-    "California": [
 
-        "California classiques",
+    "sushi": [
 
-        "California spéciaux"
+        {
+            id: "nigiri",
+            fr: "Nigiri",
+            en: "Nigiri"
+        },
 
-    ],
-
-
-    "Plats chauds": [
-
-        "Kushikatsu",
-
-        "Yakitori",
-
-        "Gyoza",
-
-        "Tempura"
+        {
+            id: "sashimi",
+            fr: "Sashimi",
+            en: "Sashimi"
+        }
 
     ],
 
 
-    "Menus": [
 
-        "Menus Sushi",
+    "maki": [
 
-        "Menus Maki",
+        {
+            id: "maki-classiques",
+            fr: "Maki classiques",
+            en: "Classic Maki"
+        },
 
-        "Menus Famille"
+        {
+            id: "maki-speciaux",
+            fr: "Maki spéciaux",
+            en: "Special Maki"
+        }
 
     ],
 
 
-    "Desserts": [
 
-        "Desserts"
+    "california": [
+
+        {
+            id: "california-classiques",
+            fr: "California classiques",
+            en: "Classic California"
+        },
+
+        {
+            id: "california-speciaux",
+            fr: "California spéciaux",
+            en: "Special California"
+        }
 
     ],
 
 
-    "Boissons": [
 
-        "Softs",
+    "plats-chauds": [
 
-        "Eaux",
+        {
+            id: "kushikatsu",
+            fr: "Kushikatsu",
+            en: "Kushikatsu"
+        },
 
-        "Jus"
+        {
+            id: "yakitori",
+            fr: "Yakitori",
+            en: "Yakitori"
+        },
+
+        {
+            id: "gyoza",
+            fr: "Gyoza",
+            en: "Gyoza"
+        },
+
+        {
+            id: "tempura",
+            fr: "Tempura",
+            en: "Tempura"
+        }
+
+    ],
+
+
+
+    "menus": [
+
+        {
+            id: "menus-sushi",
+            fr: "Menus Sushi",
+            en: "Sushi Sets"
+        },
+
+        {
+            id: "menus-maki",
+            fr: "Menus Maki",
+            en: "Maki Sets"
+        },
+
+        {
+            id: "menus-famille",
+            fr: "Menus Famille",
+            en: "Family Sets"
+        }
+
+    ],
+
+
+
+    "desserts": [
+
+        {
+            id: "desserts",
+            fr: "Desserts",
+            en: "Desserts"
+        }
+
+    ],
+
+
+
+    "boissons": [
+
+        {
+            id: "softs",
+            fr: "Softs",
+            en: "Soft Drinks"
+        },
+
+        {
+            id: "eaux",
+            fr: "Eaux",
+            en: "Water"
+        },
+
+        {
+            id: "jus",
+            fr: "Jus",
+            en: "Juices"
+        }
 
     ]
 
@@ -157,27 +240,16 @@ const subcategoriesOrder = {
 
 
 /* =========================================================
-   🟢 3. TES PRODUITS
+   🟢 3. PRODUITS
    =========================================================
 
-   Pour chaque produit :
-
-   reference   → Référence du produit
-   nameFR      → Nom français
-   nameEN      → Nom anglais
-   price       → Prix
-   image       → Image dans /images
-   category    → Catégorie principale
-   subcategory → Sous-catégorie
+   Pour ajouter tes produits,
+   tu copies simplement un bloc.
 
    ========================================================= */
 
 const products = [
 
-
-    /* =====================================================
-       EXEMPLE : PLATS CHAUDS → KUSHIKATSU
-       ===================================================== */
 
     {
         reference: "193",
@@ -190,9 +262,9 @@ const products = [
 
         image: "images/193.jpg",
 
-        category: "Plats chauds",
+        category: "plats-chauds",
 
-        subcategory: "Kushikatsu"
+        subcategory: "kushikatsu"
     },
 
 
@@ -207,9 +279,9 @@ const products = [
 
         image: "images/194.jpg",
 
-        category: "Plats chauds",
+        category: "plats-chauds",
 
-        subcategory: "Kushikatsu"
+        subcategory: "kushikatsu"
     },
 
 
@@ -224,16 +296,11 @@ const products = [
 
         image: "images/195.jpg",
 
-        category: "Plats chauds",
+        category: "plats-chauds",
 
-        subcategory: "Kushikatsu"
+        subcategory: "kushikatsu"
     },
 
-
-
-    /* =====================================================
-       EXEMPLE : PLATS CHAUDS → YAKITORI
-       ===================================================== */
 
     {
         reference: "196",
@@ -246,9 +313,9 @@ const products = [
 
         image: "images/196.jpg",
 
-        category: "Plats chauds",
+        category: "plats-chauds",
 
-        subcategory: "Yakitori"
+        subcategory: "yakitori"
     },
 
 
@@ -263,16 +330,11 @@ const products = [
 
         image: "images/197.jpg",
 
-        category: "Plats chauds",
+        category: "plats-chauds",
 
-        subcategory: "Yakitori"
+        subcategory: "yakitori"
     },
 
-
-
-    /* =====================================================
-       EXEMPLE : PLATS CHAUDS → GYOZA
-       ===================================================== */
 
     {
         reference: "198",
@@ -285,16 +347,11 @@ const products = [
 
         image: "images/198.jpg",
 
-        category: "Plats chauds",
+        category: "plats-chauds",
 
-        subcategory: "Gyoza"
+        subcategory: "gyoza"
     },
 
-
-
-    /* =====================================================
-       EXEMPLE : SUSHI → NIGIRI
-       ===================================================== */
 
     {
         reference: "201",
@@ -307,9 +364,9 @@ const products = [
 
         image: "images/201.jpg",
 
-        category: "Sushi",
+        category: "sushi",
 
-        subcategory: "Nigiri"
+        subcategory: "nigiri"
     },
 
 
@@ -324,16 +381,11 @@ const products = [
 
         image: "images/202.jpg",
 
-        category: "Sushi",
+        category: "sushi",
 
-        subcategory: "Nigiri"
+        subcategory: "nigiri"
     },
 
-
-
-    /* =====================================================
-       EXEMPLE : MAKI → MAKI CLASSIQUES
-       ===================================================== */
 
     {
         reference: "203",
@@ -346,52 +398,18 @@ const products = [
 
         image: "images/203.jpg",
 
-        category: "Maki",
+        category: "maki",
 
-        subcategory: "Maki classiques"
-    },
-
-
-    /*
-    =========================================================
-
-    🟢 POUR AJOUTER UN PRODUIT :
-
-    Copie ce modèle :
-
-    {
-        reference: "204",
-
-        nameFR: "Nom français",
-
-        nameEN: "English name",
-
-        price: "XX DT",
-
-        image: "images/204.jpg",
-
-        category: "Plats chauds",
-
-        subcategory: "Kushikatsu"
-    },
-
-    =========================================================
-    */
+        subcategory: "maki-classiques"
+    }
 
 
 ];
 
 
-/* =========================================================
-   🔴 FIN DE LA ZONE À MODIFIER
-   ========================================================= */
-
-
-
-
 
 /* =========================================================
-   TRADUCTIONS DE L'INTERFACE
+   TRADUCTIONS
    ========================================================= */
 
 const translations = {
@@ -450,40 +468,81 @@ let currentSearch = "";
    ========================================================= */
 
 const languageScreen =
-    document.getElementById("languageScreen");
+    document.getElementById(
+        "languageScreen"
+    );
+
 
 const menuApp =
-    document.getElementById("menuApp");
+    document.getElementById(
+        "menuApp"
+    );
+
 
 const languageSwitcher =
-    document.getElementById("languageSwitcher");
+    document.getElementById(
+        "languageSwitcher"
+    );
+
 
 const languageChoices =
-    document.querySelectorAll(".language-choice");
+    document.querySelectorAll(
+        ".language-choice"
+    );
+
 
 const categoryNavigation =
-    document.getElementById("categoryNavigation");
+    document.getElementById(
+        "categoryNavigation"
+    );
+
+
+const subcategoryNavigation =
+    document.getElementById(
+        "subcategoryNavigation"
+    );
+
 
 const productsContainer =
-    document.getElementById("productsContainer");
+    document.getElementById(
+        "productsContainer"
+    );
+
 
 const searchInput =
-    document.getElementById("searchInput");
+    document.getElementById(
+        "searchInput"
+    );
+
 
 const clearSearch =
-    document.getElementById("clearSearch");
+    document.getElementById(
+        "clearSearch"
+    );
+
 
 const noResults =
-    document.getElementById("noResults");
+    document.getElementById(
+        "noResults"
+    );
+
 
 const menuTitle =
-    document.getElementById("menuTitle");
+    document.getElementById(
+        "menuTitle"
+    );
+
 
 const menuSubtitle =
-    document.getElementById("menuSubtitle");
+    document.getElementById(
+        "menuSubtitle"
+    );
+
 
 const currentYear =
-    document.getElementById("currentYear");
+    document.getElementById(
+        "currentYear"
+    );
 
 
 
@@ -494,6 +553,7 @@ const currentYear =
 document.addEventListener(
     "DOMContentLoaded",
     () => {
+
 
         const savedLanguage =
             localStorage.getItem(
@@ -545,6 +605,7 @@ function setupEventListeners() {
                 "click",
                 () => {
 
+
                     const selectedLanguage =
                         button.dataset.language;
 
@@ -574,9 +635,13 @@ function setupEventListeners() {
         "click",
         () => {
 
+
             const newLanguage =
+
                 currentLanguage === "fr"
+
                     ? "en"
+
                     : "fr";
 
 
@@ -599,7 +664,9 @@ function setupEventListeners() {
         "input",
         event => {
 
+
             currentSearch =
+
                 event.target.value
                     .toLowerCase()
                     .trim();
@@ -617,7 +684,7 @@ function setupEventListeners() {
 
     /*
     ---------------------------------------------------------
-    EFFACER LA RECHERCHE
+    EFFACER RECHERCHE
     ---------------------------------------------------------
     */
 
@@ -625,11 +692,17 @@ function setupEventListeners() {
         "click",
         () => {
 
-            searchInput.value = "";
 
-            currentSearch = "";
+            searchInput.value =
+                "";
+
+
+            currentSearch =
+                "";
+
 
             updateClearButton();
+
 
             renderProducts();
 
@@ -648,6 +721,7 @@ function setLanguage(
     language
 ) {
 
+
     currentLanguage =
         language;
 
@@ -658,24 +732,23 @@ function setLanguage(
     );
 
 
-    if (
+    languageSwitcher.textContent =
+
         language === "fr"
-    ) {
 
-        languageSwitcher.textContent =
-            "🇫🇷 FR";
+            ? "🇫🇷 FR"
 
-    } else {
-
-        languageSwitcher.textContent =
-            "🇬🇧 EN";
-
-    }
+            : "🇬🇧 EN";
 
 
     updateInterfaceTexts();
 
+
     renderCategories();
+
+
+    renderSubcategories();
+
 
     renderProducts();
 
@@ -689,9 +762,11 @@ function setLanguage(
 
 function showMenu() {
 
+
     languageScreen.classList.add(
         "hidden"
     );
+
 
     menuApp.classList.remove(
         "hidden"
@@ -739,11 +814,15 @@ function updateInterfaceTexts() {
 
 
     const noResultsTitle =
-        noResults.querySelector("h2");
+        noResults.querySelector(
+            "h2"
+        );
 
 
     const noResultsText =
-        noResults.querySelector("p");
+        noResults.querySelector(
+            "p"
+        );
 
 
     noResultsTitle.textContent =
@@ -764,7 +843,55 @@ function updateInterfaceTexts() {
 
 
 /* =========================================================
-   AFFICHER LES CATÉGORIES PRINCIPALES
+   TROUVER UNE CATÉGORIE
+   ========================================================= */
+
+function getCategory(
+    categoryId
+) {
+
+
+    return categoriesOrder.find(
+        category =>
+
+            category.id ===
+            categoryId
+    );
+
+}
+
+
+
+/* =========================================================
+   TROUVER UNE SOUS-CATÉGORIE
+   ========================================================= */
+
+function getSubcategory(
+    categoryId,
+    subcategoryId
+) {
+
+
+    const subcategories =
+
+        subcategoriesOrder[
+            categoryId
+        ] || [];
+
+
+    return subcategories.find(
+        subcategory =>
+
+            subcategory.id ===
+            subcategoryId
+    );
+
+}
+
+
+
+/* =========================================================
+   AFFICHER CATÉGORIES PRINCIPALES
    ========================================================= */
 
 function renderCategories() {
@@ -776,16 +903,20 @@ function renderCategories() {
 
     /*
     ---------------------------------------------------------
-    BOUTON "TOUT"
+    BOUTON TOUT
     ---------------------------------------------------------
     */
 
     const allButton =
+
         createCategoryButton(
+
             "all",
+
             translations[
                 currentLanguage
             ].all
+
         );
 
 
@@ -797,7 +928,7 @@ function renderCategories() {
 
     /*
     ---------------------------------------------------------
-    CATÉGORIES DANS L'ORDRE DÉFINI
+    CATÉGORIES
     ---------------------------------------------------------
     */
 
@@ -805,16 +936,13 @@ function renderCategories() {
         category => {
 
 
-            /*
-            On vérifie que cette catégorie
-            contient au moins un produit.
-            */
-
             const hasProducts =
+
                 products.some(
                     product =>
+
                         product.category ===
-                        category
+                        category.id
                 );
 
 
@@ -828,9 +956,15 @@ function renderCategories() {
 
 
             const button =
+
                 createCategoryButton(
-                    category,
-                    category
+
+                    category.id,
+
+                    category[
+                        currentLanguage
+                    ]
+
                 );
 
 
@@ -853,6 +987,7 @@ function createCategoryButton(
     category,
     label
 ) {
+
 
     const button =
         document.createElement(
@@ -883,13 +1018,31 @@ function createCategoryButton(
         "click",
         () => {
 
+
             currentCategory =
                 category;
 
 
             renderCategories();
 
+
+            renderSubcategories();
+
+
             renderProducts();
+
+
+            /*
+            Retour en haut du menu
+            */
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
 
         }
     );
@@ -902,7 +1055,356 @@ function createCategoryButton(
 
 
 /* =========================================================
-   FILTRER LES PRODUITS
+   AFFICHER LES SOUS-CATÉGORIES
+   ========================================================= */
+
+function renderSubcategories() {
+
+
+    subcategoryNavigation.innerHTML =
+        "";
+
+
+    /*
+    ---------------------------------------------------------
+    SI "TOUT" EST SÉLECTIONNÉ
+    ---------------------------------------------------------
+
+    On cache la navigation des
+    sous-catégories.
+    */
+
+    if (
+        currentCategory === "all"
+    ) {
+
+
+        subcategoryNavigation.classList.add(
+            "hidden"
+        );
+
+
+        return;
+
+    }
+
+
+
+    /*
+    ---------------------------------------------------------
+    TROUVER LES SOUS-CATÉGORIES
+    ---------------------------------------------------------
+    */
+
+    const subcategories =
+
+        subcategoriesOrder[
+            currentCategory
+        ] || [];
+
+
+
+    /*
+    ---------------------------------------------------------
+    SI AUCUNE SOUS-CATÉGORIE
+    ---------------------------------------------------------
+    */
+
+    if (
+        subcategories.length === 0
+    ) {
+
+
+        subcategoryNavigation.classList.add(
+            "hidden"
+        );
+
+
+        return;
+
+    }
+
+
+
+    /*
+    ---------------------------------------------------------
+    AFFICHER LA BARRE
+    ---------------------------------------------------------
+    */
+
+    subcategoryNavigation.classList.remove(
+        "hidden"
+    );
+
+
+
+    /*
+    ---------------------------------------------------------
+    BOUTON "TOUT"
+    ---------------------------------------------------------
+
+    Permet de revenir au début
+    de la catégorie principale.
+    */
+
+    const allButton =
+        document.createElement(
+            "button"
+        );
+
+
+    allButton.className =
+        "subcategory-button active";
+
+
+    allButton.textContent =
+
+        translations[
+            currentLanguage
+        ].all;
+
+
+    allButton.addEventListener(
+        "click",
+        () => {
+
+
+            const categoryTitle =
+
+                document.querySelector(
+                    `.category-title[data-category="${currentCategory}"]`
+                );
+
+
+            if (
+                categoryTitle
+            ) {
+
+                scrollToElement(
+                    categoryTitle
+                );
+
+            }
+
+        }
+    );
+
+
+    subcategoryNavigation.appendChild(
+        allButton
+    );
+
+
+
+    /*
+    ---------------------------------------------------------
+    CRÉER LES BOUTONS
+    ---------------------------------------------------------
+    */
+
+    subcategories.forEach(
+        subcategory => {
+
+
+            const hasProducts =
+
+                products.some(
+                    product =>
+
+                        product.category ===
+                        currentCategory &&
+
+                        product.subcategory ===
+                        subcategory.id
+                );
+
+
+            if (
+                !hasProducts
+            ) {
+
+                return;
+
+            }
+
+
+            const button =
+
+                document.createElement(
+                    "button"
+                );
+
+
+            button.className =
+                "subcategory-button";
+
+
+            button.textContent =
+
+                subcategory[
+                    currentLanguage
+                ];
+
+
+            button.dataset.target =
+
+                `${currentCategory}-${subcategory.id}`;
+
+
+            button.addEventListener(
+                "click",
+                () => {
+
+
+                    const target =
+
+                        document.getElementById(
+
+                            `subcategory-${currentCategory}-${subcategory.id}`
+
+                        );
+
+
+                    if (
+                        target
+                    ) {
+
+
+                        scrollToElement(
+                            target
+                        );
+
+
+                        setActiveSubcategory(
+                            button
+                        );
+
+                    }
+
+                }
+            );
+
+
+            subcategoryNavigation.appendChild(
+                button
+            );
+
+        }
+    );
+
+}
+
+
+
+/* =========================================================
+   SCROLL VERS UNE SOUS-CATÉGORIE
+   ========================================================= */
+
+function scrollToElement(
+    element
+) {
+
+
+    /*
+    Hauteur approximative de la barre
+    de sous-catégories.
+
+    On place le titre juste en dessous.
+    */
+
+    const offset =
+        subcategoryNavigation.offsetHeight;
+
+
+    const elementPosition =
+
+        element.getBoundingClientRect().top;
+
+
+    const offsetPosition =
+
+        elementPosition +
+
+        window.pageYOffset -
+
+        offset -
+
+        10;
+
+
+    window.scrollTo({
+
+        top:
+            offsetPosition,
+
+        behavior:
+            "smooth"
+
+    });
+
+}
+
+
+
+/* =========================================================
+   ACTIVER UNE SOUS-CATÉGORIE
+   ========================================================= */
+
+function setActiveSubcategory(
+    activeButton
+) {
+
+
+    const buttons =
+
+        subcategoryNavigation.querySelectorAll(
+            ".subcategory-button"
+        );
+
+
+    buttons.forEach(
+        button => {
+
+
+            button.classList.remove(
+                "active"
+            );
+
+        }
+    );
+
+
+    activeButton.classList.add(
+        "active"
+    );
+
+
+
+    /*
+    Fait défiler horizontalement
+    la barre pour garder le bouton
+    visible.
+    */
+
+    activeButton.scrollIntoView({
+
+        behavior:
+            "smooth",
+
+        block:
+            "nearest",
+
+        inline:
+            "center"
+
+    });
+
+}
+
+
+
+/* =========================================================
+   FILTRER LES PRODUITS POUR LA RECHERCHE
    ========================================================= */
 
 function getFilteredProducts() {
@@ -914,7 +1416,7 @@ function getFilteredProducts() {
 
             /*
             -------------------------------------------------
-            CATÉGORIE PRINCIPALE
+            CATÉGORIE
             -------------------------------------------------
             */
 
@@ -923,45 +1425,30 @@ function getFilteredProducts() {
                 currentCategory === "all" ||
 
                 product.category ===
-                    currentCategory;
+                currentCategory;
 
 
 
             /*
             -------------------------------------------------
             RECHERCHE
-
-            Recherche dans :
-
-            - Nom français
-            - Nom anglais
-            - Référence
-            - Catégorie
-            - Sous-catégorie
             -------------------------------------------------
             */
 
             const nameFR =
+
                 product.nameFR
                     .toLowerCase();
 
 
             const nameEN =
+
                 product.nameEN
                     .toLowerCase();
 
 
-            const category =
-                product.category
-                    .toLowerCase();
-
-
-            const subcategory =
-                product.subcategory
-                    .toLowerCase();
-
-
             const reference =
+
                 product.reference
                     .toLowerCase();
 
@@ -973,14 +1460,6 @@ function getFilteredProducts() {
                 ) ||
 
                 nameEN.includes(
-                    currentSearch
-                ) ||
-
-                category.includes(
-                    currentSearch
-                ) ||
-
-                subcategory.includes(
                     currentSearch
                 ) ||
 
@@ -1029,9 +1508,11 @@ function renderProducts() {
         filteredProducts.length === 0
     ) {
 
+
         noResults.classList.remove(
             "hidden"
         );
+
 
         return;
 
@@ -1046,7 +1527,7 @@ function renderProducts() {
 
     /*
     ---------------------------------------------------------
-    AFFICHAGE PAR CATÉGORIE
+    TOUT
     ---------------------------------------------------------
     */
 
@@ -1054,32 +1535,38 @@ function renderProducts() {
         currentCategory === "all"
     ) {
 
-        /*
-        On affiche toutes les catégories
-        dans l'ordre défini.
-        */
 
         categoriesOrder.forEach(
             category => {
 
+
                 renderCategory(
-                    category,
+
+                    category.id,
+
                     filteredProducts
+
                 );
 
             }
         );
 
+
     } else {
 
+
         /*
-        On affiche uniquement
-        la catégorie sélectionnée.
+        -----------------------------------------------------
+        CATÉGORIE SÉLECTIONNÉE
+        -----------------------------------------------------
         */
 
         renderCategory(
+
             currentCategory,
+
             filteredProducts
+
         );
 
     }
@@ -1089,33 +1576,40 @@ function renderProducts() {
 
 
 /* =========================================================
-   AFFICHER UNE CATÉGORIE PRINCIPALE
+   AFFICHER UNE CATÉGORIE
    ========================================================= */
 
 function renderCategory(
-    category,
+    categoryId,
     productList
 ) {
 
 
-    /*
-    Récupère les produits
-    de cette catégorie.
-    */
+    const category =
+        getCategory(
+            categoryId
+        );
+
+
+    if (
+        !category
+    ) {
+
+        return;
+
+    }
+
+
 
     const categoryProducts =
 
         productList.filter(
             product =>
+
                 product.category ===
-                category
+                categoryId
         );
 
-
-    /*
-    Si aucun produit,
-    on ne fait rien.
-    */
 
     if (
         categoryProducts.length === 0
@@ -1128,9 +1622,9 @@ function renderCategory(
 
 
     /*
-    ========================================================
-    TITRE DE LA CATÉGORIE PRINCIPALE
-    ========================================================
+    ---------------------------------------------------------
+    TITRE CATÉGORIE
+    ---------------------------------------------------------
     */
 
     const categoryTitle =
@@ -1143,8 +1637,15 @@ function renderCategory(
         "category-title";
 
 
+    categoryTitle.dataset.category =
+        categoryId;
+
+
     categoryTitle.textContent =
-        category;
+
+        category[
+            currentLanguage
+        ];
 
 
     productsContainer.appendChild(
@@ -1154,24 +1655,18 @@ function renderCategory(
 
 
     /*
-    ========================================================
-    RÉCUPÉRER L'ORDRE DES SOUS-CATÉGORIES
-    ========================================================
+    ---------------------------------------------------------
+    SOUS-CATÉGORIES
+    ---------------------------------------------------------
     */
 
     const orderedSubcategories =
 
         subcategoriesOrder[
-            category
+            categoryId
         ] || [];
 
 
-
-    /*
-    ========================================================
-    AFFICHER LES SOUS-CATÉGORIES
-    ========================================================
-    */
 
     orderedSubcategories.forEach(
         subcategory => {
@@ -1183,15 +1678,9 @@ function renderCategory(
                     product =>
 
                         product.subcategory ===
-                        subcategory
+                        subcategory.id
                 );
 
-
-            /*
-            S'il n'y a aucun produit
-            dans cette sous-catégorie,
-            on ne l'affiche pas.
-            */
 
             if (
                 subcategoryProducts.length === 0
@@ -1204,9 +1693,9 @@ function renderCategory(
 
 
             /*
-            ------------------------------------------------
+            -------------------------------------------------
             TITRE SOUS-CATÉGORIE
-            ------------------------------------------------
+            -------------------------------------------------
             */
 
             const subcategoryTitle =
@@ -1219,8 +1708,16 @@ function renderCategory(
                 "subcategory-title";
 
 
+            subcategoryTitle.id =
+
+                `subcategory-${categoryId}-${subcategory.id}`;
+
+
             subcategoryTitle.textContent =
-                subcategory;
+
+                subcategory[
+                    currentLanguage
+                ];
 
 
             productsContainer.appendChild(
@@ -1230,14 +1727,17 @@ function renderCategory(
 
 
             /*
-            ------------------------------------------------
+            -------------------------------------------------
             GRILLE PRODUITS
-            ------------------------------------------------
+            -------------------------------------------------
             */
 
             const grid =
+
                 createProductGrid(
+
                     subcategoryProducts
+
                 );
 
 
@@ -1248,126 +1748,12 @@ function renderCategory(
         }
     );
 
-
-
-    /*
-    ========================================================
-    SOUS-CATÉGORIES NON PRÉVUES DANS LA LISTE
-    ========================================================
-
-    Si tu oublies d'ajouter une sous-catégorie
-    dans "subcategoriesOrder", les produits
-    ne disparaissent pas.
-
-    Ils seront affichés à la fin.
-    ========================================================
-    */
-
-    const displayedSubcategories =
-
-        orderedSubcategories;
-
-
-    const remainingProducts =
-
-        categoryProducts.filter(
-            product =>
-
-                !displayedSubcategories.includes(
-                    product.subcategory
-                )
-        );
-
-
-    /*
-    Si des produits restent,
-    on les affiche.
-    */
-
-    if (
-        remainingProducts.length > 0
-    ) {
-
-
-        /*
-        Regroupe les produits
-        restants par sous-catégorie.
-        */
-
-        const remainingNames =
-
-            [
-                ...new Set(
-                    remainingProducts.map(
-                        product =>
-                            product.subcategory
-                    )
-                )
-            ];
-
-
-        remainingNames.forEach(
-            subcategory => {
-
-
-                const productsInSubcategory =
-
-                    remainingProducts.filter(
-                        product =>
-
-                            product.subcategory ===
-                            subcategory
-                    );
-
-
-                /*
-                Titre
-                */
-
-                const title =
-                    document.createElement(
-                        "h3"
-                    );
-
-
-                title.className =
-                    "subcategory-title";
-
-
-                title.textContent =
-                    subcategory;
-
-
-                productsContainer.appendChild(
-                    title
-                );
-
-
-                /*
-                Produits
-                */
-
-                const grid =
-                    createProductGrid(
-                        productsInSubcategory
-                    );
-
-
-                productsContainer.appendChild(
-                    grid
-                );
-
-            }
-        );
-
-    }
-
 }
 
 
 
 /* =========================================================
-   CRÉER UNE GRILLE DE PRODUITS
+   CRÉER GRILLE PRODUITS
    ========================================================= */
 
 function createProductGrid(
@@ -1390,6 +1776,7 @@ function createProductGrid(
 
 
             const card =
+
                 createProductCard(
                     product
                 );
@@ -1410,7 +1797,7 @@ function createProductGrid(
 
 
 /* =========================================================
-   CRÉER UNE CARTE PRODUIT
+   CRÉER CARTE PRODUIT
    ========================================================= */
 
 function createProductCard(
@@ -1428,13 +1815,6 @@ function createProductCard(
         "product-card";
 
 
-
-    /*
-    ---------------------------------------------------------
-    NOM SELON LA LANGUE
-    ---------------------------------------------------------
-    */
-
     const productName =
 
         currentLanguage === "fr"
@@ -1444,24 +1824,24 @@ function createProductCard(
             : product.nameEN;
 
 
-
-    /*
-    ---------------------------------------------------------
-    HTML DE LA CARTE
-    ---------------------------------------------------------
-    */
-
     card.innerHTML = `
 
         <div class="product-image-container">
 
             <img
+
                 class="product-image"
+
                 src="${product.image}"
+
                 alt="${productName}"
+
                 loading="lazy"
+
                 onerror="this.style.display='none'"
+
             >
+
 
             <span class="product-reference">
 
@@ -1509,14 +1889,17 @@ function updateClearButton() {
         currentSearch.length > 0
     ) {
 
+
         clearSearch.style.display =
             "block";
 
+
     } else {
+
 
         clearSearch.style.display =
             "none";
 
     }
 
-}
+       }
