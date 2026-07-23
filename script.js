@@ -25,7 +25,7 @@ const categoriesOrder = [
 
     {
         id: "plats-chauds",
-        fr: "Plats chauds",
+        fr: "Plats Chauds",
         en: "Hot Dishes"
     },
 
@@ -90,55 +90,102 @@ const subcategoriesOrder = {
     "sushi": [
 
         {
-            id: "nigiri",
-            fr: "Nigiri",
-            en: "Nigiri"
+            id: "plateaux",
+            fr: "Plateaux",
+            en: "Sets"
         },
 
         {
-            id: "sashimi",
-            fr: "Sashimi",
-            en: "Sashimi"
-        }
-
-    ],
-
-
-
-    "maki": [
-
+            id: "sashimis",
+            fr: "Sashimis",
+            en: "Sashimis"
+        },
+       
         {
-            id: "maki-classiques",
-            fr: "Maki classiques",
-            en: "Classic Maki"
+            id: "nigiris",
+            fr: "Nigiris",
+            en: "Nigiris",
         },
 
         {
-            id: "maki-speciaux",
-            fr: "Maki spéciaux",
-            en: "Special Maki"
-        }
-
-    ],
-
-
-
-    "california": [
-
-        {
-            id: "california-classiques",
-            fr: "California classiques",
-            en: "Classic California"
+            id: "gunkan-maki",
+            fr: "Gunkan Maki",
+            en: "Gunkan Maki",
         },
 
         {
-            id: "california-speciaux",
-            fr: "California spéciaux",
-            en: "Special California"
-        }
+            id: "gunkan-fusion",
+            fr: "Gunkan Fusion",
+            en: "Fusion Gunkan",
+        },
+
+        {
+            id: "hosomaki",
+            fr: "Hosomaki",
+            en: "Hosomaki",
+        },
+
+        {
+            id: "california-rolls",
+            fr: "California Rolls",
+            en: "California Rolls",
+        },
+
+        {
+            id: "futomaki",
+            fr: "Futomaki",
+            en: "Futomaki",
+        },
+
+        {
+            id: "rouleaux-du-chef",
+            fr: "Rouleaux Du Chef",
+            en: "Chef's Special Rolls",
+        },
+
+        {
+            id: "green-maki",
+            fr: "Green Maki",
+            en: "Green Maki",
+        },
+
+        {
+            id: "sushi-cake",
+            fr: "Sushi Cake",
+            en: "Sushi Cake",
+        },
+
+        {
+            id: "sushi-panko",
+            fr: "Sushi Panko",
+            en: "Sushi Panko",
+        },
+
+        {
+            id: "crunchy-rolls",
+            fr: "Crunchy Rolls",
+            en: "Crunchy Rolls",
+        },
+
+        {
+            id: "bols-de-riz-garnis",
+            fr: "Bols de Riz Garnis",
+            en: "Rice Bowls",
+        },
+
+        {
+            id: "tataki",
+            fr: "Spécialiés Tataki",
+            en: "Tataki Specials",
+        },
+
+        {
+            id: "Onigarazu",
+            fr: "Onigarzu",
+            en: "Onigarazu",
+        },
 
     ],
-
 
 
     "plats-chauds": [
