@@ -168,7 +168,7 @@ const subcategoriesOrder = {
         },
 
         {
-            id: "bols-de-riz-garnis",
+            id: "riz-garni",
             fr: "Bols de Riz Garnis",
             en: "Rice Bowls",
         },
@@ -191,39 +191,57 @@ const subcategoriesOrder = {
     "plats-chauds": [
 
         {
-            id: "kushikatsu",
-            fr: "Kushikatsu",
-            en: "Kushikatsu"
-        },
-
-        {
             id: "yakitori",
             fr: "Yakitori",
             en: "Yakitori"
         },
 
         {
-            id: "gyoza",
-            fr: "Gyoza",
-            en: "Gyoza"
+            id: "kushikatsu",
+            fr: "Kushikatsu",
+            en: "Kushikatsu"
         },
 
         {
             id: "tempura",
-            fr: "Tempura",
-            en: "Tempura"
-        }
+            fr: "Spécialités Tempura",
+            en: "Tempura Specials"
+        },
+
+        {
+            id: "nouilles",
+            fr: "Nouilles Yakisoba",
+            en: "Yakisoba Noodles"
+        },
+
+        {
+            id: "pilaf",
+            fr: "Riz Pilaf",
+            en: "Pilaf Rice"
+        },
+
+        {
+            id: "ramen",
+            fr: "Soupes",
+            en: "Soups"
+        },
+
+        {
+            id: "donburi",
+            fr: "Donburi",
+            en: "Donburi"
+        },
 
     ],
 
 
 
-    "menus": [
+    "accompagnements": [
 
         {
-            id: "menus-sushi",
-            fr: "Menus Sushi",
-            en: "Sushi Sets"
+            id: "riz-salade",
+            fr: "Riz/Salade",
+            en: "Rice/Salad"
         },
 
         {
@@ -231,12 +249,6 @@ const subcategoriesOrder = {
             fr: "Menus Maki",
             en: "Maki Sets"
         },
-
-        {
-            id: "menus-famille",
-            fr: "Menus Famille",
-            en: "Family Sets"
-        }
 
     ],
 
