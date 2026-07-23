@@ -950,11 +950,37 @@ body {
         1.4;
 
     margin-bottom:
-        10px;
+        7px;
 
 }
 
 
+
+/* =========================================================
+   🆕 DESCRIPTION PRODUIT
+   ========================================================= */
+
+.product-description {
+
+    font-size:
+        13px;
+
+    line-height:
+        1.5;
+
+    color:
+        var(--text-light);
+
+    margin-bottom:
+        12px;
+
+}
+
+
+
+/* =========================================================
+   PRIX
+   ========================================================= */
 
 .product-price {
 
@@ -1181,6 +1207,17 @@ body {
 
         font-size:
             13px;
+
+    }
+
+
+    .product-description {
+
+        font-size:
+            11px;
+
+        line-height:
+            1.4;
 
     }
 
