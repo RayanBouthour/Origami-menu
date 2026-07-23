@@ -23,27 +23,15 @@ const categoriesOrder = [
     },
 
     {
-        id: "maki",
-        fr: "Maki",
-        en: "Maki"
-    },
-
-    {
-        id: "california",
-        fr: "California",
-        en: "California"
-    },
-
-    {
         id: "plats-chauds",
         fr: "Plats chauds",
         en: "Hot Dishes"
     },
 
     {
-        id: "menus",
-        fr: "Menus",
-        en: "Sets"
+        id: "accompagnements",
+        fr: "Accompagnements",
+        en: "Sides"
     },
 
     {
@@ -110,43 +98,6 @@ const subcategoriesOrder = {
     ],
 
 
-
-    "maki": [
-
-        {
-            id: "maki-classiques",
-            fr: "Maki classiques",
-            en: "Classic Maki"
-        },
-
-        {
-            id: "maki-speciaux",
-            fr: "Maki spéciaux",
-            en: "Special Maki"
-        }
-
-    ],
-
-
-
-    "california": [
-
-        {
-            id: "california-classiques",
-            fr: "California classiques",
-            en: "Classic California"
-        },
-
-        {
-            id: "california-speciaux",
-            fr: "California spéciaux",
-            en: "Special California"
-        }
-
-    ],
-
-
-
     "plats-chauds": [
 
         {
@@ -177,7 +128,7 @@ const subcategoriesOrder = {
 
 
 
-    "menus": [
+    "accompagnements": [
 
         {
             id: "menus-sushi",
