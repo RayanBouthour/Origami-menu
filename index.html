@@ -1,66 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
     <meta charset="UTF-8">
 
-    <!-- Mobile -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Description -->
     <meta
-        name="description"
-        content="Découvrez le menu Origami Sushi Bar."
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Origami Sushi Bar — Menu</title>
-
-    <!-- Police Google Fonts -->
-    <!-- Tu peux changer la police ici si besoin -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>
+        Origami Sushi Bar — Menu
+    </title>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet"
+        href="style.css"
     >
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
+
 
     <!-- =====================================================
          ÉCRAN DE CHOIX DE LA LANGUE
          ===================================================== -->
 
-    <div id="languageScreen" class="language-screen">
+    <div
+        id="languageScreen"
+        class="language-screen"
+    >
 
         <div class="language-box">
 
-            <div class="brand-logo">
+            <div class="logo">
                 ORIGAMI
             </div>
 
-            <div class="brand-subtitle">
-                SUSHI BAR
-            </div>
 
-            <div class="language-title">
-                <span class="fr-text">
-                    Bienvenue
-                </span>
+            <h1>
+                Bienvenue
+            </h1>
 
-                <span class="en-text">
-                    Welcome
-                </span>
-            </div>
 
-            <p class="language-description">
+            <p>
                 Choisissez votre langue
-                <br>
-                Choose your language
             </p>
+
 
             <div class="language-buttons">
 
@@ -68,16 +57,27 @@
                     class="language-choice"
                     data-language="fr"
                 >
+
                     🇫🇷
-                    <span>Français</span>
+
+                    <span>
+                        Français
+                    </span>
+
                 </button>
+
 
                 <button
                     class="language-choice"
                     data-language="en"
                 >
+
                     🇬🇧
-                    <span>English</span>
+
+                    <span>
+                        English
+                    </span>
+
                 </button>
 
             </div>
@@ -87,168 +87,152 @@
     </div>
 
 
+
     <!-- =====================================================
-         SITE PRINCIPAL
+         APPLICATION DU MENU
          ===================================================== -->
 
-    <div id="menuApp" class="menu-app hidden">
+    <div
+        id="menuApp"
+        class="menu-app hidden"
+    >
 
 
         <!-- =================================================
              HEADER
              ================================================= -->
 
-        <header class="header">
+        <header class="site-header">
 
-            <!-- Bouton langue fixe en haut à gauche -->
+
+            <!-- Bouton langue -->
 
             <button
                 id="languageSwitcher"
                 class="language-switcher"
-                aria-label="Change language"
             >
+
                 🇫🇷 FR
+
             </button>
 
 
-            <!-- Logo -->
 
-            <div class="header-logo">
+            <div class="header-content">
 
-                <div class="logo-main">
+                <div class="logo">
                     ORIGAMI
                 </div>
 
-                <div class="logo-sub">
-                    SUSHI BAR
-                </div>
+
+                <h1 id="menuTitle">
+                    Notre Menu
+                </h1>
+
+
+                <p id="menuSubtitle">
+                    Découvrez notre sélection
+                </p>
 
             </div>
+
 
         </header>
 
 
 
         <!-- =================================================
-             CONTENU
+             RECHERCHE
              ================================================= -->
 
-        <main class="main-content">
+        <div class="search-container">
 
-
-            <!-- Introduction -->
-
-            <section class="menu-intro">
-
-                <h1
-                    id="menuTitle"
-                    data-fr="Notre Menu"
-                    data-en="Our Menu"
-                >
-                    Notre Menu
-                </h1>
-
-                <p
-                    id="menuSubtitle"
-                    data-fr="Découvrez notre sélection"
-                    data-en="Discover our selection"
-                >
-                    Découvrez notre sélection
-                </p>
-
-            </section>
-
-
-
-            <!-- =================================================
-                 RECHERCHE
-                 ================================================= -->
-
-            <div class="search-container">
+            <div class="search-box">
 
                 <input
-                    type="search"
+                    type="text"
                     id="searchInput"
                     placeholder="Rechercher un plat..."
                     autocomplete="off"
                 >
 
+
                 <button
                     id="clearSearch"
                     class="clear-search"
-                    aria-label="Clear search"
+                    aria-label="Effacer la recherche"
                 >
+
                     ×
+
                 </button>
 
             </div>
 
-
-
-            <!-- =================================================
-                 CATÉGORIES
-                 ================================================= -->
-
-            <nav
-                id="categoryNavigation"
-                class="category-navigation"
-                aria-label="Menu categories"
-            >
-
-                <!-- Les catégories seront automatiquement
-                     générées par JavaScript -->
-
-            </nav>
+        </div>
 
 
 
-            <!-- =================================================
-                 LISTE DES PRODUITS
-                 ================================================= -->
+        <!-- =================================================
+             CATÉGORIES PRINCIPALES
+             ================================================= -->
 
-            <section
-                id="productsContainer"
-                class="products-container"
-            >
-
-                <!-- Les produits seront automatiquement
-                     générés par JavaScript -->
-
-            </section>
+        <nav
+            id="categoryNavigation"
+            class="category-navigation"
+        >
+        </nav>
 
 
 
-            <!-- =================================================
-                 MESSAGE SI AUCUN PRODUIT
-                 ================================================= -->
+        <!-- =================================================
+             SOUS-CATÉGORIES
 
-            <div
-                id="noResults"
-                class="no-results hidden"
-            >
+             Cette barre apparaît lorsqu'une catégorie
+             principale est sélectionnée.
 
-                <div class="no-results-icon">
-                    🍣
-                </div>
+             Elle est défilable horizontalement sur mobile.
+             ================================================= -->
 
-                <h2
-                    data-fr="Aucun résultat"
-                    data-en="No results"
-                >
-                    Aucun résultat
-                </h2>
-
-                <p
-                    data-fr="Aucun produit ne correspond à votre recherche."
-                    data-en="No product matches your search."
-                >
-                    Aucun produit ne correspond à votre recherche.
-                </p>
-
-            </div>
+        <nav
+            id="subcategoryNavigation"
+            class="subcategory-navigation hidden"
+        >
+        </nav>
 
 
+
+        <!-- =================================================
+             CONTENU DU MENU
+             ================================================= -->
+
+        <main
+            id="productsContainer"
+            class="products-container"
+        >
         </main>
+
+
+
+        <!-- =================================================
+             AUCUN RÉSULTAT
+             ================================================= -->
+
+        <div
+            id="noResults"
+            class="no-results hidden"
+        >
+
+            <h2>
+                Aucun résultat
+            </h2>
+
+
+            <p>
+                Aucun produit ne correspond à votre recherche.
+            </p>
+
+        </div>
 
 
 
@@ -256,18 +240,16 @@
              FOOTER
              ================================================= -->
 
-        <footer class="footer">
+        <footer class="site-footer">
 
-            <div class="footer-logo">
+            <div class="logo">
                 ORIGAMI
             </div>
 
-            <div class="footer-subtitle">
-                SUSHI BAR
-            </div>
 
             <p>
-                © <span id="currentYear"></span>
+                ©
+                <span id="currentYear"></span>
                 Origami Sushi Bar
             </p>
 
@@ -277,11 +259,16 @@
     </div>
 
 
+
     <!-- =====================================================
          JAVASCRIPT
          ===================================================== -->
 
-    <script src="script.js"></script>
+    <script
+        src="script.js"
+    ></script>
+
 
 </body>
+
 </html>
