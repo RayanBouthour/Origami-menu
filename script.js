@@ -10,6 +10,7 @@
 
 const categoriesOrder = [
 
+    
     {
         id: "entrees",
         fr: "Entrées",
@@ -103,6 +104,43 @@ const subcategoriesOrder = {
     ],
 
 
+
+    "maki": [
+
+        {
+            id: "maki-classiques",
+            fr: "Maki classiques",
+            en: "Classic Maki"
+        },
+
+        {
+            id: "maki-speciaux",
+            fr: "Maki spéciaux",
+            en: "Special Maki"
+        }
+
+    ],
+
+
+
+    "california": [
+
+        {
+            id: "california-classiques",
+            fr: "California classiques",
+            en: "Classic California"
+        },
+
+        {
+            id: "california-speciaux",
+            fr: "California spéciaux",
+            en: "Special California"
+        }
+
+    ],
+
+
+
     "plats-chauds": [
 
         {
@@ -133,7 +171,7 @@ const subcategoriesOrder = {
 
 
 
-    "accompagnements": [
+    "menus": [
 
         {
             id: "menus-sushi",
@@ -199,8 +237,17 @@ const subcategoriesOrder = {
    🟢 3. PRODUITS
    =========================================================
 
-   Pour ajouter tes produits,
-   tu copies simplement un bloc.
+   POUR AJOUTER UN PRODUIT :
+
+   - reference       = référence du produit
+   - nameFR          = nom français
+   - nameEN          = nom anglais
+   - descriptionFR   = description française
+   - descriptionEN   = description anglaise
+   - price            = prix
+   - image            = chemin vers l'image
+   - category         = catégorie principale
+   - subcategory      = sous-catégorie
 
    ========================================================= */
 
@@ -213,6 +260,12 @@ const products = [
         nameFR: "Kushikatsu Bœuf Fromage",
 
         nameEN: "Beef Cheese Kushikatsu",
+
+        descriptionFR:
+            "Bœuf pané et fromage fondant, servi avec une sauce maison.",
+
+        descriptionEN:
+            "Breaded beef and melted cheese, served with homemade sauce.",
 
         price: "18 DT",
 
@@ -231,6 +284,12 @@ const products = [
 
         nameEN: "Chicken Kushikatsu",
 
+        descriptionFR:
+            "Morceaux de poulet panés et frits à la perfection.",
+
+        descriptionEN:
+            "Breaded chicken pieces, fried to perfection.",
+
         price: "16 DT",
 
         image: "images/194.jpg",
@@ -247,6 +306,12 @@ const products = [
         nameFR: "Kushikatsu Crevette",
 
         nameEN: "Shrimp Kushikatsu",
+
+        descriptionFR:
+            "Crevettes panées et croustillantes, accompagnées de leur sauce.",
+
+        descriptionEN:
+            "Crispy breaded shrimp, served with their sauce.",
 
         price: "20 DT",
 
@@ -265,6 +330,12 @@ const products = [
 
         nameEN: "Chicken Yakitori",
 
+        descriptionFR:
+            "Brochettes de poulet grillées et délicatement assaisonnées.",
+
+        descriptionEN:
+            "Grilled chicken skewers, delicately seasoned.",
+
         price: "15 DT",
 
         image: "images/196.jpg",
@@ -281,6 +352,12 @@ const products = [
         nameFR: "Yakitori Bœuf",
 
         nameEN: "Beef Yakitori",
+
+        descriptionFR:
+            "Brochettes de bœuf grillées et savoureuses.",
+
+        descriptionEN:
+            "Flavorful grilled beef skewers.",
 
         price: "17 DT",
 
@@ -299,6 +376,12 @@ const products = [
 
         nameEN: "Chicken Gyoza",
 
+        descriptionFR:
+            "Raviolis japonais au poulet, légèrement croustillants.",
+
+        descriptionEN:
+            "Japanese chicken dumplings, lightly crispy.",
+
         price: "14 DT",
 
         image: "images/198.jpg",
@@ -315,6 +398,12 @@ const products = [
         nameFR: "Nigiri Saumon",
 
         nameEN: "Salmon Nigiri",
+
+        descriptionFR:
+            "Tranche de saumon frais déposée sur un riz vinaigré japonais.",
+
+        descriptionEN:
+            "Fresh salmon served over seasoned Japanese sushi rice.",
 
         price: "12 DT",
 
@@ -333,6 +422,12 @@ const products = [
 
         nameEN: "Tuna Nigiri",
 
+        descriptionFR:
+            "Tranche de thon frais déposée sur un riz vinaigré japonais.",
+
+        descriptionEN:
+            "Fresh tuna served over seasoned Japanese sushi rice.",
+
         price: "14 DT",
 
         image: "images/202.jpg",
@@ -349,6 +444,12 @@ const products = [
         nameFR: "Maki Saumon",
 
         nameEN: "Salmon Maki",
+
+        descriptionFR:
+            "Maki au saumon frais roulé dans une feuille de nori.",
+
+        descriptionEN:
+            "Fresh salmon maki rolls wrapped in nori seaweed.",
 
         price: "15 DT",
 
@@ -548,12 +649,6 @@ document.addEventListener(
 function setupEventListeners() {
 
 
-    /*
-    ---------------------------------------------------------
-    CHOIX INITIAL DE LA LANGUE
-    ---------------------------------------------------------
-    */
-
     languageChoices.forEach(
         button => {
 
@@ -581,12 +676,6 @@ function setupEventListeners() {
 
 
 
-    /*
-    ---------------------------------------------------------
-    CHANGEMENT DE LANGUE
-    ---------------------------------------------------------
-    */
-
     languageSwitcher.addEventListener(
         "click",
         () => {
@@ -610,12 +699,6 @@ function setupEventListeners() {
 
 
 
-    /*
-    ---------------------------------------------------------
-    RECHERCHE
-    ---------------------------------------------------------
-    */
-
     searchInput.addEventListener(
         "input",
         event => {
@@ -637,12 +720,6 @@ function setupEventListeners() {
     );
 
 
-
-    /*
-    ---------------------------------------------------------
-    EFFACER RECHERCHE
-    ---------------------------------------------------------
-    */
 
     clearSearch.addEventListener(
         "click",
@@ -819,34 +896,6 @@ function getCategory(
 
 
 /* =========================================================
-   TROUVER UNE SOUS-CATÉGORIE
-   ========================================================= */
-
-function getSubcategory(
-    categoryId,
-    subcategoryId
-) {
-
-
-    const subcategories =
-
-        subcategoriesOrder[
-            categoryId
-        ] || [];
-
-
-    return subcategories.find(
-        subcategory =>
-
-            subcategory.id ===
-            subcategoryId
-    );
-
-}
-
-
-
-/* =========================================================
    AFFICHER CATÉGORIES PRINCIPALES
    ========================================================= */
 
@@ -856,12 +905,6 @@ function renderCategories() {
     categoryNavigation.innerHTML =
         "";
 
-
-    /*
-    ---------------------------------------------------------
-    BOUTON TOUT
-    ---------------------------------------------------------
-    */
 
     const allButton =
 
@@ -881,12 +924,6 @@ function renderCategories() {
     );
 
 
-
-    /*
-    ---------------------------------------------------------
-    CATÉGORIES
-    ---------------------------------------------------------
-    */
 
     categoriesOrder.forEach(
         category => {
@@ -988,10 +1025,6 @@ function createCategoryButton(
             renderProducts();
 
 
-            /*
-            Retour en haut du menu
-            */
-
             window.scrollTo({
 
                 top: 0,
@@ -1021,15 +1054,6 @@ function renderSubcategories() {
         "";
 
 
-    /*
-    ---------------------------------------------------------
-    SI "TOUT" EST SÉLECTIONNÉ
-    ---------------------------------------------------------
-
-    On cache la navigation des
-    sous-catégories.
-    */
-
     if (
         currentCategory === "all"
     ) {
@@ -1046,12 +1070,6 @@ function renderSubcategories() {
 
 
 
-    /*
-    ---------------------------------------------------------
-    TROUVER LES SOUS-CATÉGORIES
-    ---------------------------------------------------------
-    */
-
     const subcategories =
 
         subcategoriesOrder[
@@ -1059,12 +1077,6 @@ function renderSubcategories() {
         ] || [];
 
 
-
-    /*
-    ---------------------------------------------------------
-    SI AUCUNE SOUS-CATÉGORIE
-    ---------------------------------------------------------
-    */
 
     if (
         subcategories.length === 0
@@ -1082,26 +1094,11 @@ function renderSubcategories() {
 
 
 
-    /*
-    ---------------------------------------------------------
-    AFFICHER LA BARRE
-    ---------------------------------------------------------
-    */
-
     subcategoryNavigation.classList.remove(
         "hidden"
     );
 
 
-
-    /*
-    ---------------------------------------------------------
-    BOUTON "TOUT"
-    ---------------------------------------------------------
-
-    Permet de revenir au début
-    de la catégorie principale.
-    */
 
     const allButton =
         document.createElement(
@@ -1151,12 +1148,6 @@ function renderSubcategories() {
     );
 
 
-
-    /*
-    ---------------------------------------------------------
-    CRÉER LES BOUTONS
-    ---------------------------------------------------------
-    */
 
     subcategories.forEach(
         subcategory => {
@@ -1261,13 +1252,6 @@ function scrollToElement(
 ) {
 
 
-    /*
-    Hauteur approximative de la barre
-    de sous-catégories.
-
-    On place le titre juste en dessous.
-    */
-
     const offset =
         subcategoryNavigation.offsetHeight;
 
@@ -1335,13 +1319,6 @@ function setActiveSubcategory(
     );
 
 
-
-    /*
-    Fait défiler horizontalement
-    la barre pour garder le bouton
-    visible.
-    */
-
     activeButton.scrollIntoView({
 
         behavior:
@@ -1360,7 +1337,7 @@ function setActiveSubcategory(
 
 
 /* =========================================================
-   FILTRER LES PRODUITS POUR LA RECHERCHE
+   FILTRER LES PRODUITS
    ========================================================= */
 
 function getFilteredProducts() {
@@ -1370,12 +1347,6 @@ function getFilteredProducts() {
         product => {
 
 
-            /*
-            -------------------------------------------------
-            CATÉGORIE
-            -------------------------------------------------
-            */
-
             const matchesCategory =
 
                 currentCategory === "all" ||
@@ -1384,12 +1355,6 @@ function getFilteredProducts() {
                 currentCategory;
 
 
-
-            /*
-            -------------------------------------------------
-            RECHERCHE
-            -------------------------------------------------
-            */
 
             const nameFR =
 
@@ -1403,10 +1368,23 @@ function getFilteredProducts() {
                     .toLowerCase();
 
 
+            const descriptionFR =
+
+                product.descriptionFR
+                    .toLowerCase();
+
+
+            const descriptionEN =
+
+                product.descriptionEN
+                    .toLowerCase();
+
+
             const reference =
 
                 product.reference
                     .toLowerCase();
+
 
 
             const matchesSearch =
@@ -1416,6 +1394,14 @@ function getFilteredProducts() {
                 ) ||
 
                 nameEN.includes(
+                    currentSearch
+                ) ||
+
+                descriptionFR.includes(
+                    currentSearch
+                ) ||
+
+                descriptionEN.includes(
                     currentSearch
                 ) ||
 
@@ -1454,12 +1440,6 @@ function renderProducts() {
         getFilteredProducts();
 
 
-    /*
-    ---------------------------------------------------------
-    AUCUN RÉSULTAT
-    ---------------------------------------------------------
-    */
-
     if (
         filteredProducts.length === 0
     ) {
@@ -1480,12 +1460,6 @@ function renderProducts() {
     );
 
 
-
-    /*
-    ---------------------------------------------------------
-    TOUT
-    ---------------------------------------------------------
-    */
 
     if (
         currentCategory === "all"
@@ -1510,12 +1484,6 @@ function renderProducts() {
 
     } else {
 
-
-        /*
-        -----------------------------------------------------
-        CATÉGORIE SÉLECTIONNÉE
-        -----------------------------------------------------
-        */
 
         renderCategory(
 
@@ -1577,12 +1545,6 @@ function renderCategory(
 
 
 
-    /*
-    ---------------------------------------------------------
-    TITRE CATÉGORIE
-    ---------------------------------------------------------
-    */
-
     const categoryTitle =
         document.createElement(
             "h2"
@@ -1609,12 +1571,6 @@ function renderCategory(
     );
 
 
-
-    /*
-    ---------------------------------------------------------
-    SOUS-CATÉGORIES
-    ---------------------------------------------------------
-    */
 
     const orderedSubcategories =
 
@@ -1648,12 +1604,6 @@ function renderCategory(
 
 
 
-            /*
-            -------------------------------------------------
-            TITRE SOUS-CATÉGORIE
-            -------------------------------------------------
-            */
-
             const subcategoryTitle =
                 document.createElement(
                     "h3"
@@ -1681,12 +1631,6 @@ function renderCategory(
             );
 
 
-
-            /*
-            -------------------------------------------------
-            GRILLE PRODUITS
-            -------------------------------------------------
-            */
 
             const grid =
 
@@ -1780,6 +1724,16 @@ function createProductCard(
             : product.nameEN;
 
 
+    const productDescription =
+
+        currentLanguage === "fr"
+
+            ? product.descriptionFR
+
+            : product.descriptionEN;
+
+
+
     card.innerHTML = `
 
         <div class="product-image-container">
@@ -1815,6 +1769,13 @@ function createProductCard(
                 ${productName}
 
             </h3>
+
+
+            <p class="product-description">
+
+                ${productDescription}
+
+            </p>
 
 
             <div class="product-price">
@@ -1858,4 +1819,4 @@ function updateClearButton() {
 
     }
 
-       }
+   }
