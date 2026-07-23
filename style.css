@@ -10,55 +10,34 @@
 
 :root {
 
-    /*
-    ========================================================
-    🎨 COULEURS PRINCIPALES
+    --background:
+        #f7f5f1;
 
-    Si tu veux modifier les couleurs du site,
-    c'est principalement ici que tu dois intervenir.
-    ========================================================
-    */
+    --background-dark:
+        #111111;
 
-    --black: #111111;
+    --text:
+        #1a1a1a;
 
-    --dark: #1a1a1a;
+    --text-light:
+        #777777;
 
-    --white: #ffffff;
+    --white:
+        #ffffff;
 
-    --off-white: #faf9f7;
+    --gold:
+        #b08d57;
 
-    --light-gray: #eeeeee;
+    --border:
+        #e5e1da;
 
-    --gray: #777777;
-
-    --gold: #b89a5d;
-
-    --gold-light: #d0b477;
-
-
-    /*
-    ========================================================
-    TYPOGRAPHIES
-    ========================================================
-    */
-
-    --font-main: "Montserrat", sans-serif;
-
-    --font-title: "Playfair Display", serif;
-
-
-    /*
-    ========================================================
-    AUTRES
-    ========================================================
-    */
-
-    --radius: 8px;
-
-    --shadow:
-        0 4px 20px rgba(0, 0, 0, 0.08);
+    --font-main:
+        Arial,
+        Helvetica,
+        sans-serif;
 
 }
+
 
 
 /* =========================================================
@@ -76,28 +55,37 @@
 }
 
 
+
 html {
 
     scroll-behavior: smooth;
 
+    scroll-padding-top: 150px;
+
 }
+
 
 
 body {
 
-    font-family: var(--font-main);
+    font-family:
+        var(--font-main);
 
-    background: var(--off-white);
+    background:
+        var(--background);
 
-    color: var(--black);
+    color:
+        var(--text);
 
-    min-height: 100vh;
+    min-height:
+        100vh;
 
 }
 
 
+
 /* =========================================================
-   UTILITAIRES
+   UTILITAIRE
    ========================================================= */
 
 .hidden {
@@ -107,327 +95,275 @@ body {
 }
 
 
+
 /* =========================================================
    ÉCRAN DE LANGUE
    ========================================================= */
 
 .language-screen {
 
-    position: fixed;
+    position:
+        fixed;
 
-    inset: 0;
+    inset:
+        0;
 
-    z-index: 9999;
+    z-index:
+        9999;
 
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    justify-content: center;
+    justify-content:
+        center;
 
-    background: var(--black);
+    background:
+        var(--background);
 
-    padding: 20px;
+    padding:
+        20px;
 
 }
+
 
 
 .language-box {
 
-    width: 100%;
+    width:
+        100%;
 
-    max-width: 420px;
+    max-width:
+        450px;
 
-    text-align: center;
-
-    color: var(--white);
-
-}
-
-
-.brand-logo {
-
-    font-family: var(--font-title);
-
-    font-size: 48px;
-
-    font-weight: 600;
-
-    letter-spacing: 5px;
+    text-align:
+        center;
 
 }
 
 
-.brand-subtitle {
 
-    font-size: 11px;
+.language-box .logo {
 
-    letter-spacing: 7px;
+    font-size:
+        30px;
 
-    margin-top: 5px;
+    font-weight:
+        700;
 
-    color: var(--gold-light);
+    letter-spacing:
+        6px;
 
-}
-
-
-.language-title {
-
-    font-family: var(--font-title);
-
-    font-size: 30px;
-
-    margin-top: 70px;
+    margin-bottom:
+        40px;
 
 }
 
 
-.language-description {
 
-    color: #bdbdbd;
+.language-box h1 {
 
-    font-size: 13px;
+    font-size:
+        28px;
 
-    line-height: 1.7;
-
-    margin-top: 10px;
+    margin-bottom:
+        10px;
 
 }
+
+
+
+.language-box p {
+
+    color:
+        var(--text-light);
+
+    margin-bottom:
+        30px;
+
+}
+
 
 
 .language-buttons {
 
-    display: flex;
+    display:
+        flex;
 
-    flex-direction: column;
+    gap:
+        15px;
 
-    gap: 12px;
-
-    margin-top: 35px;
+    justify-content:
+        center;
 
 }
+
 
 
 .language-choice {
 
-    width: 100%;
+    flex:
+        1;
 
-    min-height: 58px;
+    max-width:
+        180px;
 
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding:
+        18px;
 
-    background: transparent;
+    border:
+        1px solid var(--border);
 
-    color: white;
+    background:
+        var(--white);
 
-    border-radius: var(--radius);
+    cursor:
+        pointer;
 
-    cursor: pointer;
+    font-size:
+        17px;
 
-    font-family: var(--font-main);
-
-    font-size: 14px;
-
-    font-weight: 600;
-
-    transition: all 0.25s ease;
-
-}
-
-
-.language-choice span {
-
-    margin-left: 8px;
+    transition:
+        0.25s;
 
 }
+
 
 
 .language-choice:hover {
 
-    background: var(--white);
+    border-color:
+        var(--gold);
 
-    color: var(--black);
+    transform:
+        translateY(-2px);
 
-    transform: translateY(-2px);
+}
+
+
+
+.language-choice span {
+
+    display:
+        block;
+
+    margin-top:
+        8px;
 
 }
 
-
-/* =========================================================
-   APPLICATION
-   ========================================================= */
-
-.menu-app {
-
-    min-height: 100vh;
-
-    background: var(--off-white);
-
-}
 
 
 /* =========================================================
    HEADER
    ========================================================= */
 
-.header {
+.site-header {
 
-    position: sticky;
+    position:
+        relative;
 
-    top: 0;
+    text-align:
+        center;
 
-    z-index: 1000;
+    padding:
+        35px 20px 25px;
 
-    height: 80px;
-
-    background: rgba(255, 255, 255, 0.96);
-
-    backdrop-filter: blur(12px);
-
-    border-bottom: 1px solid var(--light-gray);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
+    background:
+        var(--background);
 
 }
+
+
+
+.header-content .logo {
+
+    font-size:
+        25px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        5px;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+
+.header-content h1 {
+
+    font-size:
+        30px;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+
+.header-content p {
+
+    color:
+        var(--text-light);
+
+}
+
 
 
 /* =========================================================
    BOUTON LANGUE
-
-   📌 FIXE EN HAUT À GAUCHE
    ========================================================= */
 
 .language-switcher {
 
-    position: absolute;
+    position:
+        absolute;
 
-    left: 16px;
+    top:
+        20px;
 
-    top: 50%;
+    left:
+        20px;
 
-    transform: translateY(-50%);
+    border:
+        1px solid var(--border);
 
-    background: transparent;
+    background:
+        var(--white);
 
-    border: 1px solid #dddddd;
+    padding:
+        8px 12px;
 
-    border-radius: 30px;
+    cursor:
+        pointer;
 
-    padding: 9px 13px;
+    font-size:
+        13px;
 
-    font-family: var(--font-main);
+    border-radius:
+        4px;
 
-    font-size: 11px;
-
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition: all 0.2s ease;
+    transition:
+        0.2s;
 
 }
+
 
 
 .language-switcher:hover {
 
-    border-color: var(--gold);
-
-    color: var(--gold);
-
-}
-
-
-/* =========================================================
-   LOGO HEADER
-   ========================================================= */
-
-.header-logo {
-
-    text-align: center;
+    border-color:
+        var(--gold);
 
 }
 
-
-.logo-main {
-
-    font-family: var(--font-title);
-
-    font-size: 27px;
-
-    font-weight: 600;
-
-    letter-spacing: 4px;
-
-}
-
-
-.logo-sub {
-
-    font-size: 7px;
-
-    letter-spacing: 5px;
-
-    color: var(--gold);
-
-    margin-top: 2px;
-
-}
-
-
-/* =========================================================
-   CONTENU PRINCIPAL
-   ========================================================= */
-
-.main-content {
-
-    width: 100%;
-
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    padding: 45px 20px 80px;
-
-}
-
-
-/* =========================================================
-   INTRODUCTION
-   ========================================================= */
-
-.menu-intro {
-
-    text-align: center;
-
-    margin-bottom: 35px;
-
-}
-
-
-.menu-intro h1 {
-
-    font-family: var(--font-title);
-
-    font-size: 38px;
-
-    font-weight: 600;
-
-}
-
-
-.menu-intro p {
-
-    color: var(--gray);
-
-    font-size: 13px;
-
-    margin-top: 8px;
-
-}
 
 
 /* =========================================================
@@ -436,169 +372,420 @@ body {
 
 .search-container {
 
-    position: relative;
+    max-width:
+        700px;
 
-    max-width: 500px;
+    margin:
+        0 auto 25px;
 
-    margin: 0 auto 30px;
-
-}
-
-
-#searchInput {
-
-    width: 100%;
-
-    height: 48px;
-
-    padding: 0 45px 0 18px;
-
-    border: 1px solid #dddddd;
-
-    border-radius: 30px;
-
-    background: white;
-
-    font-family: var(--font-main);
-
-    font-size: 13px;
-
-    outline: none;
-
-    transition: border 0.2s ease;
+    padding:
+        0 20px;
 
 }
 
 
-#searchInput:focus {
 
-    border-color: var(--gold);
+.search-box {
+
+    position:
+        relative;
 
 }
+
+
+
+.search-box input {
+
+    width:
+        100%;
+
+    padding:
+        14px 45px 14px 18px;
+
+    border:
+        1px solid var(--border);
+
+    background:
+        var(--white);
+
+    outline:
+        none;
+
+    font-size:
+        15px;
+
+    border-radius:
+        5px;
+
+}
+
+
+
+.search-box input:focus {
+
+    border-color:
+        var(--gold);
+
+}
+
 
 
 .clear-search {
 
-    position: absolute;
+    position:
+        absolute;
 
-    right: 14px;
+    right:
+        12px;
 
-    top: 50%;
+    top:
+        50%;
 
-    transform: translateY(-50%);
+    transform:
+        translateY(-50%);
 
-    border: none;
+    display:
+        none;
 
-    background: transparent;
+    border:
+        none;
 
-    font-size: 22px;
+    background:
+        none;
 
-    color: #999;
+    font-size:
+        22px;
 
-    cursor: pointer;
+    color:
+        var(--text-light);
 
-    display: none;
+    cursor:
+        pointer;
 
 }
 
 
+
 /* =========================================================
-   CATÉGORIES
+   CATÉGORIES PRINCIPALES
    ========================================================= */
 
 .category-navigation {
 
-    display: flex;
+    display:
+        flex;
 
-    gap: 8px;
+    gap:
+        10px;
 
-    overflow-x: auto;
+    overflow-x:
+        auto;
 
-    padding: 5px 0 15px;
+    padding:
+        0 20px 15px;
 
-    margin-bottom: 35px;
+    max-width:
+        1200px;
 
-    scrollbar-width: none;
+    margin:
+        0 auto;
+
+    scrollbar-width:
+        none;
 
 }
+
 
 
 .category-navigation::-webkit-scrollbar {
 
-    display: none;
+    display:
+        none;
 
 }
+
 
 
 .category-button {
 
-    flex: 0 0 auto;
+    flex:
+        0 0 auto;
 
-    border: 1px solid #dddddd;
+    padding:
+        10px 17px;
 
-    background: white;
+    border:
+        1px solid var(--border);
 
-    color: var(--black);
+    background:
+        var(--white);
 
-    padding: 10px 17px;
+    color:
+        var(--text);
 
-    border-radius: 30px;
+    cursor:
+        pointer;
 
-    font-family: var(--font-main);
+    white-space:
+        nowrap;
 
-    font-size: 11px;
+    font-size:
+        14px;
 
-    font-weight: 600;
+    border-radius:
+        4px;
 
-    cursor: pointer;
-
-    transition: all 0.2s ease;
+    transition:
+        0.2s;
 
 }
+
 
 
 .category-button:hover {
 
-    border-color: var(--gold);
+    border-color:
+        var(--gold);
 
 }
+
 
 
 .category-button.active {
 
-    background: var(--black);
+    background:
+        var(--text);
 
-    color: white;
+    color:
+        var(--white);
 
-    border-color: var(--black);
+    border-color:
+        var(--text);
 
 }
 
 
+
 /* =========================================================
-   TITRE DE CATÉGORIE
+   NAVIGATION SOUS-CATÉGORIES
+   ========================================================= */
+
+.subcategory-navigation {
+
+    position:
+        sticky;
+
+    top:
+        0;
+
+    z-index:
+        100;
+
+    display:
+        flex;
+
+    gap:
+        8px;
+
+    overflow-x:
+        auto;
+
+    padding:
+        10px 20px;
+
+    background:
+        rgba(
+            247,
+            245,
+            241,
+            0.96
+        );
+
+    border-top:
+        1px solid var(--border);
+
+    border-bottom:
+        1px solid var(--border);
+
+    backdrop-filter:
+        blur(10px);
+
+    scrollbar-width:
+        none;
+
+}
+
+
+
+.subcategory-navigation::-webkit-scrollbar {
+
+    display:
+        none;
+
+}
+
+
+
+.subcategory-button {
+
+    flex:
+        0 0 auto;
+
+    padding:
+        8px 15px;
+
+    border:
+        none;
+
+    background:
+        transparent;
+
+    color:
+        var(--text-light);
+
+    cursor:
+        pointer;
+
+    white-space:
+        nowrap;
+
+    font-size:
+        13px;
+
+    transition:
+        0.2s;
+
+}
+
+
+
+.subcategory-button:hover {
+
+    color:
+        var(--text);
+
+}
+
+
+
+.subcategory-button.active {
+
+    color:
+        var(--text);
+
+    font-weight:
+        700;
+
+}
+
+
+
+.subcategory-button.active::after {
+
+    content:
+        "";
+
+    display:
+        block;
+
+    height:
+        2px;
+
+    background:
+        var(--gold);
+
+    margin-top:
+        5px;
+
+}
+
+
+
+/* =========================================================
+   CONTENEUR PRODUITS
+   ========================================================= */
+
+.products-container {
+
+    max-width:
+        1200px;
+
+    margin:
+        0 auto;
+
+    padding:
+        25px 20px 60px;
+
+}
+
+
+
+/* =========================================================
+   TITRE CATÉGORIE PRINCIPALE
    ========================================================= */
 
 .category-title {
 
-    font-family: var(--font-title);
+    font-size:
+        26px;
 
-    font-size: 27px;
+    font-weight:
+        700;
 
-    margin: 45px 0 20px;
+    letter-spacing:
+        2px;
 
-    padding-bottom: 12px;
+    text-transform:
+        uppercase;
 
-    border-bottom: 1px solid #dedede;
+    margin:
+        35px 0 25px;
+
+    padding-bottom:
+        12px;
+
+    border-bottom:
+        1px solid var(--border);
+
+    scroll-margin-top:
+        70px;
 
 }
 
 
-.category-title:first-child {
 
-    margin-top: 0;
+/* =========================================================
+   TITRE SOUS-CATÉGORIE
+   ========================================================= */
+
+.subcategory-title {
+
+    font-size:
+        17px;
+
+    font-weight:
+        700;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1.5px;
+
+    margin:
+        35px 0 18px;
+
+    padding-left:
+        12px;
+
+    border-left:
+        3px solid var(--gold);
+
+    scroll-margin-top:
+        70px;
 
 }
+
 
 
 /* =========================================================
@@ -607,14 +794,23 @@ body {
 
 .products-grid {
 
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+        repeat(
+            auto-fill,
+            minmax(
+                220px,
+                1fr
+            )
+        );
 
-    gap: 22px;
+    gap:
+        20px;
 
 }
+
 
 
 /* =========================================================
@@ -623,29 +819,41 @@ body {
 
 .product-card {
 
-    background: white;
+    background:
+        var(--white);
 
-    border-radius: var(--radius);
+    border:
+        1px solid var(--border);
 
-    overflow: hidden;
-
-    box-shadow: var(--shadow);
+    overflow:
+        hidden;
 
     transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+        transform 0.25s,
+        box-shadow 0.25s;
 
 }
+
 
 
 .product-card:hover {
 
-    transform: translateY(-4px);
+    transform:
+        translateY(
+            -3px
+        );
 
     box-shadow:
-        0 8px 30px rgba(0, 0, 0, 0.12);
+        0 8px 25px
+        rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
 
 }
+
 
 
 /* =========================================================
@@ -654,111 +862,113 @@ body {
 
 .product-image-container {
 
-    position: relative;
+    position:
+        relative;
 
-    width: 100%;
+    width:
+        100%;
 
-    aspect-ratio: 1 / 1;
+    aspect-ratio:
+        1 / 1;
 
-    background: #eeeeee;
-
-    overflow: hidden;
+    background:
+        #eeeeee;
 
 }
+
 
 
 .product-image {
 
-    width: 100%;
+    width:
+        100%;
 
-    height: 100%;
+    height:
+        100%;
 
-    object-fit: cover;
+    object-fit:
+        cover;
 
-    display: block;
-
-    transition: transform 0.4s ease;
-
-}
-
-
-.product-card:hover .product-image {
-
-    transform: scale(1.03);
+    display:
+        block;
 
 }
 
 
-/* =========================================================
-   RÉFÉRENCE
-   ========================================================= */
 
 .product-reference {
 
-    position: absolute;
+    position:
+        absolute;
 
-    top: 10px;
+    top:
+        10px;
 
-    left: 10px;
+    left:
+        10px;
 
-    background: rgba(0, 0, 0, 0.75);
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            0.7
+        );
 
-    color: white;
+    color:
+        white;
 
-    padding: 5px 8px;
+    padding:
+        5px 8px;
 
-    border-radius: 4px;
-
-    font-size: 10px;
-
-    font-weight: 600;
+    font-size:
+        12px;
 
 }
 
 
+
 /* =========================================================
-   INFORMATIONS PRODUIT
+   INFOS PRODUIT
    ========================================================= */
 
 .product-info {
 
-    padding: 17px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 15px;
+    padding:
+        15px;
 
 }
+
 
 
 .product-name {
 
-    font-family: var(--font-title);
+    font-size:
+        15px;
 
-    font-size: 17px;
+    line-height:
+        1.4;
 
-    font-weight: 600;
-
-    line-height: 1.35;
+    margin-bottom:
+        10px;
 
 }
+
 
 
 .product-price {
 
-    flex-shrink: 0;
+    font-size:
+        15px;
 
-    font-size: 13px;
+    font-weight:
+        700;
 
-    font-weight: 700;
-
-    color: var(--gold);
-
-    white-space: nowrap;
+    color:
+        var(--gold);
 
 }
+
 
 
 /* =========================================================
@@ -767,178 +977,177 @@ body {
 
 .no-results {
 
-    text-align: center;
+    text-align:
+        center;
 
-    padding: 70px 20px;
-
-}
-
-
-.no-results-icon {
-
-    font-size: 40px;
-
-    margin-bottom: 15px;
+    padding:
+        80px 20px;
 
 }
+
 
 
 .no-results h2 {
 
-    font-family: var(--font-title);
-
-    font-size: 25px;
+    margin-bottom:
+        10px;
 
 }
+
 
 
 .no-results p {
 
-    color: var(--gray);
-
-    font-size: 13px;
-
-    margin-top: 8px;
+    color:
+        var(--text-light);
 
 }
+
 
 
 /* =========================================================
    FOOTER
    ========================================================= */
 
-.footer {
+.site-footer {
 
-    text-align: center;
+    text-align:
+        center;
 
-    padding: 50px 20px;
+    padding:
+        40px 20px;
 
-    background: var(--black);
+    border-top:
+        1px solid var(--border);
 
-    color: white;
-
-}
-
-
-.footer-logo {
-
-    font-family: var(--font-title);
-
-    font-size: 24px;
-
-    letter-spacing: 4px;
+    color:
+        var(--text-light);
 
 }
 
 
-.footer-subtitle {
 
-    font-size: 7px;
+.site-footer .logo {
 
-    letter-spacing: 5px;
+    color:
+        var(--text);
 
-    color: var(--gold-light);
+    font-weight:
+        700;
 
-    margin-top: 3px;
+    letter-spacing:
+        4px;
 
-}
-
-
-.footer p {
-
-    margin-top: 25px;
-
-    color: #999;
-
-    font-size: 10px;
+    margin-bottom:
+        10px;
 
 }
 
-
-/* =========================================================
-   TABLETTES
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-    .products-grid {
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-    }
-
-}
 
 
 /* =========================================================
    MOBILE
    ========================================================= */
 
-@media (max-width: 600px) {
+@media (
+    max-width: 600px
+) {
 
 
-    .header {
+    .language-box .logo {
 
-        height: 68px;
+        font-size:
+            25px;
+
+    }
+
+
+    .language-box h1 {
+
+        font-size:
+            24px;
+
+    }
+
+
+    .language-buttons {
+
+        flex-direction:
+            column;
+
+        align-items:
+            center;
+
+    }
+
+
+    .language-choice {
+
+        max-width:
+            300px;
+
+        width:
+            100%;
+
+    }
+
+
+    .site-header {
+
+        padding-top:
+            70px;
 
     }
 
 
     .language-switcher {
 
-        left: 10px;
+        top:
+            15px;
 
-        padding: 8px 10px;
-
-        font-size: 10px;
-
-    }
-
-
-    .logo-main {
-
-        font-size: 21px;
-
-        letter-spacing: 3px;
+        left:
+            15px;
 
     }
 
 
-    .logo-sub {
+    .header-content h1 {
 
-        font-size: 6px;
-
-    }
-
-
-    .main-content {
-
-        padding:
-            35px
-            12px
-            60px;
+        font-size:
+            25px;
 
     }
 
 
-    .menu-intro {
+    .category-navigation {
 
-        margin-bottom: 28px;
+        padding-left:
+            15px;
 
-    }
-
-
-    .menu-intro h1 {
-
-        font-size: 31px;
+        padding-right:
+            15px;
 
     }
 
 
-    .menu-intro p {
+    .subcategory-navigation {
 
-        font-size: 12px;
+        padding-left:
+            15px;
+
+        padding-right:
+            15px;
+
+    }
+
+
+    .products-container {
+
+        padding-left:
+            15px;
+
+        padding-right:
+            15px;
 
     }
 
@@ -946,68 +1155,56 @@ body {
     .products-grid {
 
         grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+            repeat(
+                2,
+                minmax(
+                    0,
+                    1fr
+                )
+            );
 
-        gap: 10px;
+        gap:
+            10px;
 
     }
 
 
     .product-info {
 
-        padding: 12px;
-
-        flex-direction: column;
-
-        gap: 5px;
+        padding:
+            10px;
 
     }
 
 
     .product-name {
 
-        font-size: 15px;
+        font-size:
+            13px;
 
     }
 
 
     .product-price {
 
-        font-size: 12px;
-
-    }
-
-
-    .product-reference {
-
-        font-size: 9px;
-
-        padding: 4px 6px;
+        font-size:
+            13px;
 
     }
 
 
     .category-title {
 
-        font-size: 24px;
-
-        margin-top: 35px;
+        font-size:
+            21px;
 
     }
 
-}
 
+    .subcategory-title {
 
-/* =========================================================
-   PETITS TÉLÉPHONES
-   ========================================================= */
-
-@media (max-width: 360px) {
-
-    .products-grid {
-
-        grid-template-columns:
-            1fr;
+        font-size:
+            15px;
 
     }
 
