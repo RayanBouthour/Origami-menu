@@ -13,7 +13,7 @@ const categoriesOrder = [
     {
         id: "entrees",
         fr: "Entrées",
-        en: "Starters"
+        en: "Appetizers"
     },
 
     {
@@ -58,13 +58,6 @@ const subcategoriesOrder = {
 
 
     "entrees": [
-
-        {
-            id: "salades",
-            fr: "Salades",
-            en: "Salads"
-        },
-
         {
             id: "soupes",
             fr: "Soupes",
@@ -72,9 +65,21 @@ const subcategoriesOrder = {
         },
 
         {
-            id: "edamame",
-            fr: "Edamame",
-            en: "Edamame"
+            id: "gyozas",
+            fr: "Gyozas",
+            en: "Potstickers"
+        },
+       
+        {
+            id: "salades",
+            fr: "Salades",
+            en: "Salads"
+        },
+
+        {
+            id: "tartares",
+            fr: "Tartares",
+            en: "Tartares"
         }
 
     ],
