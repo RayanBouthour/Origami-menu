@@ -1,1 +1,1014 @@
+/* =========================================================
+   ORIGAMI SUSHI BAR — MENU QR
+   STYLE.CSS
+   ========================================================= */
 
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+
+    /*
+    ========================================================
+    🎨 COULEURS PRINCIPALES
+
+    Si tu veux modifier les couleurs du site,
+    c'est principalement ici que tu dois intervenir.
+    ========================================================
+    */
+
+    --black: #111111;
+
+    --dark: #1a1a1a;
+
+    --white: #ffffff;
+
+    --off-white: #faf9f7;
+
+    --light-gray: #eeeeee;
+
+    --gray: #777777;
+
+    --gold: #b89a5d;
+
+    --gold-light: #d0b477;
+
+
+    /*
+    ========================================================
+    TYPOGRAPHIES
+    ========================================================
+    */
+
+    --font-main: "Montserrat", sans-serif;
+
+    --font-title: "Playfair Display", serif;
+
+
+    /*
+    ========================================================
+    AUTRES
+    ========================================================
+    */
+
+    --radius: 8px;
+
+    --shadow:
+        0 4px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family: var(--font-main);
+
+    background: var(--off-white);
+
+    color: var(--black);
+
+    min-height: 100vh;
+
+}
+
+
+/* =========================================================
+   UTILITAIRES
+   ========================================================= */
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+/* =========================================================
+   ÉCRAN DE LANGUE
+   ========================================================= */
+
+.language-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--black);
+
+    padding: 20px;
+
+}
+
+
+.language-box {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    text-align: center;
+
+    color: var(--white);
+
+}
+
+
+.brand-logo {
+
+    font-family: var(--font-title);
+
+    font-size: 48px;
+
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+}
+
+
+.brand-subtitle {
+
+    font-size: 11px;
+
+    letter-spacing: 7px;
+
+    margin-top: 5px;
+
+    color: var(--gold-light);
+
+}
+
+
+.language-title {
+
+    font-family: var(--font-title);
+
+    font-size: 30px;
+
+    margin-top: 70px;
+
+}
+
+
+.language-description {
+
+    color: #bdbdbd;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-top: 10px;
+
+}
+
+
+.language-buttons {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 35px;
+
+}
+
+
+.language-choice {
+
+    width: 100%;
+
+    min-height: 58px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    background: transparent;
+
+    color: white;
+
+    border-radius: var(--radius);
+
+    cursor: pointer;
+
+    font-family: var(--font-main);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+
+}
+
+
+.language-choice span {
+
+    margin-left: 8px;
+
+}
+
+
+.language-choice:hover {
+
+    background: var(--white);
+
+    color: var(--black);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================================
+   APPLICATION
+   ========================================================= */
+
+.menu-app {
+
+    min-height: 100vh;
+
+    background: var(--off-white);
+
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    height: 80px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid var(--light-gray);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =========================================================
+   BOUTON LANGUE
+
+   📌 FIXE EN HAUT À GAUCHE
+   ========================================================= */
+
+.language-switcher {
+
+    position: absolute;
+
+    left: 16px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: transparent;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 30px;
+
+    padding: 9px 13px;
+
+    font-family: var(--font-main);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+}
+
+
+.language-switcher:hover {
+
+    border-color: var(--gold);
+
+    color: var(--gold);
+
+}
+
+
+/* =========================================================
+   LOGO HEADER
+   ========================================================= */
+
+.header-logo {
+
+    text-align: center;
+
+}
+
+
+.logo-main {
+
+    font-family: var(--font-title);
+
+    font-size: 27px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+}
+
+
+.logo-sub {
+
+    font-size: 7px;
+
+    letter-spacing: 5px;
+
+    color: var(--gold);
+
+    margin-top: 2px;
+
+}
+
+
+/* =========================================================
+   CONTENU PRINCIPAL
+   ========================================================= */
+
+.main-content {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 45px 20px 80px;
+
+}
+
+
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
+
+.menu-intro {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.menu-intro h1 {
+
+    font-family: var(--font-title);
+
+    font-size: 38px;
+
+    font-weight: 600;
+
+}
+
+
+.menu-intro p {
+
+    color: var(--gray);
+
+    font-size: 13px;
+
+    margin-top: 8px;
+
+}
+
+
+/* =========================================================
+   RECHERCHE
+   ========================================================= */
+
+.search-container {
+
+    position: relative;
+
+    max-width: 500px;
+
+    margin: 0 auto 30px;
+
+}
+
+
+#searchInput {
+
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 45px 0 18px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 30px;
+
+    background: white;
+
+    font-family: var(--font-main);
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition: border 0.2s ease;
+
+}
+
+
+#searchInput:focus {
+
+    border-color: var(--gold);
+
+}
+
+
+.clear-search {
+
+    position: absolute;
+
+    right: 14px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 22px;
+
+    color: #999;
+
+    cursor: pointer;
+
+    display: none;
+
+}
+
+
+/* =========================================================
+   CATÉGORIES
+   ========================================================= */
+
+.category-navigation {
+
+    display: flex;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    padding: 5px 0 15px;
+
+    margin-bottom: 35px;
+
+    scrollbar-width: none;
+
+}
+
+
+.category-navigation::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+
+.category-button {
+
+    flex: 0 0 auto;
+
+    border: 1px solid #dddddd;
+
+    background: white;
+
+    color: var(--black);
+
+    padding: 10px 17px;
+
+    border-radius: 30px;
+
+    font-family: var(--font-main);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+}
+
+
+.category-button:hover {
+
+    border-color: var(--gold);
+
+}
+
+
+.category-button.active {
+
+    background: var(--black);
+
+    color: white;
+
+    border-color: var(--black);
+
+}
+
+
+/* =========================================================
+   TITRE DE CATÉGORIE
+   ========================================================= */
+
+.category-title {
+
+    font-family: var(--font-title);
+
+    font-size: 27px;
+
+    margin: 45px 0 20px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #dedede;
+
+}
+
+
+.category-title:first-child {
+
+    margin-top: 0;
+
+}
+
+
+/* =========================================================
+   GRILLE PRODUITS
+   ========================================================= */
+
+.products-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+
+}
+
+
+/* =========================================================
+   CARTE PRODUIT
+   ========================================================= */
+
+.product-card {
+
+    background: white;
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.product-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.12);
+
+}
+
+
+/* =========================================================
+   IMAGE PRODUIT
+   ========================================================= */
+
+.product-image-container {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    background: #eeeeee;
+
+    overflow: hidden;
+
+}
+
+
+.product-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+
+}
+
+
+.product-card:hover .product-image {
+
+    transform: scale(1.03);
+
+}
+
+
+/* =========================================================
+   RÉFÉRENCE
+   ========================================================= */
+
+.product-reference {
+
+    position: absolute;
+
+    top: 10px;
+
+    left: 10px;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    color: white;
+
+    padding: 5px 8px;
+
+    border-radius: 4px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   INFORMATIONS PRODUIT
+   ========================================================= */
+
+.product-info {
+
+    padding: 17px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+}
+
+
+.product-name {
+
+    font-family: var(--font-title);
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+
+}
+
+
+.product-price {
+
+    flex-shrink: 0;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: var(--gold);
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   AUCUN RÉSULTAT
+   ========================================================= */
+
+.no-results {
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+}
+
+
+.no-results-icon {
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.no-results h2 {
+
+    font-family: var(--font-title);
+
+    font-size: 25px;
+
+}
+
+
+.no-results p {
+
+    color: var(--gray);
+
+    font-size: 13px;
+
+    margin-top: 8px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background: var(--black);
+
+    color: white;
+
+}
+
+
+.footer-logo {
+
+    font-family: var(--font-title);
+
+    font-size: 24px;
+
+    letter-spacing: 4px;
+
+}
+
+
+.footer-subtitle {
+
+    font-size: 7px;
+
+    letter-spacing: 5px;
+
+    color: var(--gold-light);
+
+    margin-top: 3px;
+
+}
+
+
+.footer p {
+
+    margin-top: 25px;
+
+    color: #999;
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   TABLETTES
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .products-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+
+    .header {
+
+        height: 68px;
+
+    }
+
+
+    .language-switcher {
+
+        left: 10px;
+
+        padding: 8px 10px;
+
+        font-size: 10px;
+
+    }
+
+
+    .logo-main {
+
+        font-size: 21px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .logo-sub {
+
+        font-size: 6px;
+
+    }
+
+
+    .main-content {
+
+        padding:
+            35px
+            12px
+            60px;
+
+    }
+
+
+    .menu-intro {
+
+        margin-bottom: 28px;
+
+    }
+
+
+    .menu-intro h1 {
+
+        font-size: 31px;
+
+    }
+
+
+    .menu-intro p {
+
+        font-size: 12px;
+
+    }
+
+
+    .products-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+
+    }
+
+
+    .product-info {
+
+        padding: 12px;
+
+        flex-direction: column;
+
+        gap: 5px;
+
+    }
+
+
+    .product-name {
+
+        font-size: 15px;
+
+    }
+
+
+    .product-price {
+
+        font-size: 12px;
+
+    }
+
+
+    .product-reference {
+
+        font-size: 9px;
+
+        padding: 4px 6px;
+
+    }
+
+
+    .category-title {
+
+        font-size: 24px;
+
+        margin-top: 35px;
+
+    }
+
+}
+
+
+/* =========================================================
+   PETITS TÉLÉPHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .products-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
